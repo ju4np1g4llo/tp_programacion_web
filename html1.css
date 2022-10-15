@@ -22,9 +22,11 @@
 .body{
     border-radius: 5px 5px 0 0;
     width: 1000px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: 200px;
-    font-family: rubik,helvetica,arial,sans-serif;
 }
+
 
 .medicos{
     border-radius: 5px 5px 0px 0px;
@@ -32,9 +34,10 @@
     height: 300px;
     padding: 10px;
     border: 3px solid black;
+    margin-top: 20px;
     margin-bottom: 20px;
     background: rgb(255, 255, 255);
-    font-family: rubik,helvetica,arial,sans-serif;
+    font-family: georgia;
     display: inline-block;
     text-align: justify;
 }
@@ -45,9 +48,10 @@
     height: 300px;
     padding: 10px;
     border: 3px solid black;
+    margin-top: 20px;
     margin-bottom: 20px;
     background: rgb(255, 255, 255);
-    font-family: rubik,helvetica,arial,sans-serif;
+    font-family: georgia;
     display: inline-block;
     text-align: justify;
 }
@@ -58,9 +62,10 @@
     height: 300px;
     padding: 10px;
     border: 3px solid black;
+    margin-top: 20px;
     margin-bottom: 20px;
     background: rgb(255, 255, 255);
-    font-family: rubik,helvetica,arial,sans-serif;
+    font-family: georgia;
     display: inline-block;
     text-align: justify;
 }
