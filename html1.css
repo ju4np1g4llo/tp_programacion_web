@@ -70,6 +70,10 @@
     background: rgb(255, 255, 255);
     font-family: georgia;
     text-align: justify;
+    background-image: url("https://img.freepik.com/foto-gratis/primer-plano-paciente-medico-choca-cinco_23-2148868137.jpg?w=2000");
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: -40px;
 }
 
 .nuestrosmedicos{
