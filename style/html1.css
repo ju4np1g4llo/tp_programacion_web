@@ -1,0 +1,186 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+.header{
+    border-radius: 5px 5px 0 0;
+    width: 1000px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 50px;
+    margin-left: 180px;
+    margin-bottom: 20px;
+    background: rgb(255, 255, 255);
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+
+.titulo{
+    text-align: center;
+    font-family: georgia;
+}
+
+.date{
+    font-family: georgia;
+}
+
+.body{
+    border-radius: 5px 5px 0 0;
+    width: 1000px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.medicos{
+    border-radius: 5px 5px 0px 0px;
+    width: 300px; 
+    height: 300px;
+    padding: 10px;
+    border: 3px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgb(255, 255, 255);
+    font-family: georgia;
+    text-align: justify;
+    background-image: url("https://img.freepik.com/free-photo/doctor-nurses-special-equipment_23-2148980721.jpg?w=2000");
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: -40px;
+}
+
+.about{
+    border-radius: 5px 5px 0px 0px;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border: 3px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgb(255, 255, 255);
+    font-family: georgia;
+    text-align: center;
+}
+
+.pacientes{
+    border-radius: 5px 5px 0px 0px;
+    width: 300px; 
+    height: 300px;
+    padding: 10px;
+    border: 3px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgb(255, 255, 255);
+    font-family: georgia;
+    text-align: justify;
+    background-image: url("https://img.freepik.com/foto-gratis/primer-plano-paciente-medico-choca-cinco_23-2148868137.jpg?w=2000");
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: -40px;
+}
+
+.nuestrosmedicos{
+    border-radius: 5px 5px 0px 0px;
+    border: 1.5px solid black;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+    margin-top: 110px;
+    text-align: center;
+    font-size: large;
+}
+
+.nuestrospacientes{
+    border-radius: 5px 5px 0px 0px;
+    border: 1.5px solid black;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+    margin-top: 110px;
+    text-align: center;
+    font-size: large;
+}
+
+footer{
+    border-radius: 5px 5px 0 0;
+    width: 1000px;
+    height: 500px;
+    padding: 20px;
+    border: 3px solid black;
+    margin-left: 180px;
+    background: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.text {
+    margin-left: 200px;
+    position: absolute;
+}
+
+.parrafo {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    margin-right: 265px;
+}
+
+.p{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+.word {
+    position: absolute;
+    width: 220px;
+    opacity: 0;
+}
+  
+.letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+  
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+  
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+  
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+  
+.wisteria {
+    color: #8e44ad;
+}
+  
+.belize {
+    color: #2980b9;
+}
+  
+.pomegranate {
+    color: #c0392b;
+}
+  
+.green {
+    color: #16a085;
+}
+  
+.midnight {
+    color: #2c3e50;
+}
