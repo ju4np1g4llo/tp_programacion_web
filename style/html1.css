@@ -2,15 +2,13 @@
 
 .header{
     width: 1000px;
-    margin: 50px;
     margin-left: 180px;
     margin-bottom: 20px;
     background: rgb(255, 255, 255);
     font-family: rubik,helvetica,arial,sans-serif;
-}
-
-.logo{
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .titulo{
@@ -19,6 +17,7 @@
     font-size:x-large;
 }
 
+
 .date{
     font-family: georgia;
 }
@@ -26,7 +25,7 @@
 .body{
     border-radius: 5px 5px 0 0;
     width: 1000px;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom: 20px;
     margin-left: 200px;
     display: flex;
