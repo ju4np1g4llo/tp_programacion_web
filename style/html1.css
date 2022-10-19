@@ -1,10 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 
 .header{
-    border-radius: 5px 5px 0 0;
     width: 1000px;
-    padding: 20px;
-    border: 5px solid black;
     margin: 50px;
     margin-left: 180px;
     margin-bottom: 20px;
@@ -12,9 +9,14 @@
     font-family: rubik,helvetica,arial,sans-serif;
 }
 
+.logo{
+    
+}
+
 .titulo{
-    text-align: center;
-    font-family: georgia;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size:x-large;
 }
 
 .date{
