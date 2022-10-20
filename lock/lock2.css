@@ -1,0 +1,17 @@
+body{
+    --color-primary: #009300;
+    --color-primary-dark: #009300;
+    --color-secondary: #009300;
+    --color-error: #930000;
+    --color-success: #009300;
+    --border-radius: 4px;
+
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 18px;
+    background: url(./);
+    background-size: cover;
+}
