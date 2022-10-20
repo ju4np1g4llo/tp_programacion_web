@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/html2.css" />
     <title>Document</title>
 </head>
 <body>
-    <button>Agregar</button>
+
+    <div id="formulario">
+        <button id="open"> Agregar Paciente </button>
     
+            <div class="modal-container" id="modal_container">
+                <div class="modal">
+                <h2> Ingresar informacion del paciente. </h2>
+    
+                <br><br/>
+                <br><br/>
+    
+                <form action="mailto:easyfiles@gmail.com" method="post" enctype="text/plain">
+                
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td>Nombre y Apellido</td>
+                            <td><input type="text" name="nombre" id="" size="40" placeholder="Ingresa tu nombre"></td>
+                        </tr>
+                        <tr>
+                            <td>Sexo</td>
+                            <td> 
+                                <input type="radio" name="sexo" id="" value="M">Masc.
+                                <input type="radio" name="sexo" id="" value="F">Fem.
+                                <input type="radio" name="sexo" id="" value="O">Otro
+                                <input type="radio" name="sexo" id="" value="PNO">Pref. no decir
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Edad</td>
+                            <td> <input type="number" name="cantidad" id="" vslue="18" step="1"></td>
+                        </tr>
+                    </tbody>
+                </table>                
+    
+                        <br><br/>
+                        <br><br/>
+    
+                <button id="close">Enviar ya!</button>
+            </form>
+                
+                </div>
+            </div>
+    
+           <script src="./js/html2.js"></script>
+        
+        </div>
     
 </body>
 </html>
