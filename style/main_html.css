@@ -1,9 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 
 body{
+    width: 100% ;
     margin-top: -2px;
     overflow-x: hidden;
-    background-image: url("https://img.freepik.com/vector-gratis/fondo-blanco-diseno-zigzag_1017-33197.jpg?w=740&t=st=1666272624~exp=1666273224~hmac=fe20e4af5c07341c55667045911613702752677272bcc3021ae343d9fe3c506a.jpg")
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-blanco-diseno-zigzag_1017-33197.jpg?w=740&t=st=1666272624~exp=1666273224~hmac=fe20e4af5c07341c55667045911613702752677272bcc3021ae343d9fe3c506a.jpg");
+    background-size: 1000px;
     }
 
 
@@ -13,14 +15,14 @@ body{
     padding-top: 1%;
     padding-bottom: 1%;
     font-size: larger;
-    margin-left: -125px;
-    margin-right: -100px;
+    margin-left: -2px;
+    width: 100%;
     margin-top: -1%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    justify-content: space-evenly;
-    background-size: 1750px ;
+    justify-content: space-around;
+    background-size: 2500px ;
 
 }
 
@@ -29,7 +31,7 @@ body{
 .easy-name{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:x-large;
-    margin-left: -30px
+    /*margin-left: -30px*/
     ;
     
 }
@@ -37,14 +39,16 @@ body{
 
 .date{
     font-family: georgia;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .cuerpo{
    
-    width: 1000px;
+    width: 100%;
     margin-top: 30px;
     margin-bottom: 20px;
-    margin-left: 177px;
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
@@ -127,18 +131,20 @@ body{
     font-size: large;
 }
 
-footer{
+.final-text-zone{
     border-radius: 5px 5px 0 0;
-    width: 467px;
+    width:42%;
     height: 60px;
-    padding: 20px;
+    padding-top: 1%;
+    padding-bottom: 1%;
     border: 3px solid black;
-    margin-left: 181px;
     background: rgb(255, 255, 255);
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 40px;
-    padding-left: 500px;
+    padding-left: 42%;
+    margin-left: 8%;
+    
 
 }
 
