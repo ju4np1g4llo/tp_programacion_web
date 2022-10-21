@@ -72,6 +72,7 @@ body{
     background-repeat: no-repeat;
     background-position: -40px;
     animation: imagenes-medicos 5s infinite;
+    animation-direction: alternate;
 }
 
 @keyframes imagenes-medicos{
@@ -115,6 +116,7 @@ body{
     background-repeat: no-repeat;
     background-position: -40px;
     animation: imagenes-pacientes 5s infinite;
+    animation-direction: alternate;
 }
 
 @keyframes imagenes-pacientes{
