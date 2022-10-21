@@ -1,0 +1,13 @@
+Hola
+Los que hagan front usen los archivos "lista_medicos", "lista_pacientes" 
+y creen otros 2 mas para hacer lo del form en cada uno.
+
+Los css (que están y se guardan en la carpeta style) tienen que crearlos ustedes (usen el nombre del archivo del html)
+Si usan JS, lo mismo que dije arriba (la carpeta es la js)
+
+Si usan imagenes, guardenlas en la carpeta de imagenes
+
+Cualquier cosa pregunten por el grupo
+(acuerdense de ver los pdf de la teoría que explican bastantes cosas, e intenten usar vue.js, que es un framework, que puede simplificarles algunas cosas. Lo explican en los pdf de "frameworks" en el campus.)
+
+Ah y avisen si van a trabajar en un archivo y lo ven escrito con algo, asi no tenemos problemas a la hora de hacer commits
