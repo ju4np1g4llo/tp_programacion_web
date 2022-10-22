@@ -10,9 +10,8 @@
     <title>Easy-Files: Home Page</title>
 
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <script type="text/javascript" src="./js/html1.js"></script>
-    
-    
+    <script type="text/javascript" src="./js/main_html.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 
@@ -27,7 +26,7 @@
             </div>
 
             <a href="./main_html.html">
-                <img src="./imagenes/logo.jpg" alt="logoweb" style="height: 210px; margin-left: -5px">
+                <img src="./imagenes/logo.jpg" alt="logoweb" style="height: 210px; position: absolute; margin-left: -8%;">
             </a>
         
             <div class="date">
@@ -38,19 +37,19 @@
 
     <div class="cuerpo">
 
-        <div class="boton_medicos">
+        <div class="sector_medicos">
             <nav>
                 <a href="./lista_medicos.html">Nuestros Médicos</a>
             </nav>
         
         </div>
 
-        <div class="about-us">
+        <div class="about-us" id="app">
             <h1> Sobre nosotros </h1>
-            <p>Texto de prueba, ignoren esto, no le importa a nadie (poner despues con vue el texto)</p>
+            {{about_us}} <br><br>{{about_us2}}
         </div>
 
-        <div class="boton_pacientes">
+        <div class="sector_pacientes">
             <nav>
                 <a href="./lista_pacientes.html">Nuestros Pacientes</a>
             </nav>
@@ -78,5 +77,5 @@
     </div>
 </footer>
 
-<script type="text/javascript" src="./js/html1.js"></script>
+<script type="text/javascript" src="./js/main_html.js"></script>
 </html>

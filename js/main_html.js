@@ -1,3 +1,45 @@
+var appVue1 = new Vue ({
+  el: '#app',
+  data:{
+    about_us: '"Easy Files" es una página web la cual permite ordenar todo tipo de información necesaria para un trabajador del área médica.',
+    about_us2: 'Además, se puede almacenar la información de otros compañeros de profesión, para facilitar el intercambio de información.'
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 var words = document.getElementsByClassName('word');
@@ -54,6 +96,7 @@ function splitLetters(word) {
 
 changeWord();
 setInterval(changeWord, 4000);
+
 
 
 
