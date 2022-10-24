@@ -104,6 +104,65 @@ setInterval(changeWord, 4000);
 
 
 
+
+
+
+meses=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+lasemana=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"]
+diassemana=["lun","mar","mié","jue","vie","sáb","dom"];
+
+//Tras cargarse la página ...
+window.onload = function() {
+
+// Elementos del DOM: en cabecera de calendario 
+tit=document.getElementById("titulos"); //cabecera del calendario
+ant=document.getElementById("anterior"); //mes anterior
+pos=document.getElementById("posterior"); //mes posterior
+
+//iniciar calendario:
+cabecera() 
+}
+
+//cabecera del calendario
+function cabecera() {
+         tit.innerHTML=meses[mescal]+" de "+annocal;
+         mesant=mescal-1; //mes anterior
+         mespos=mescal+1; //mes posterior
+         if (mesant<0) {mesant=11;}
+         if (mespos>11) {mespos=0;}
+         ant.innerHTML=meses[mesant]
+         pos.innerHTML=meses[mespos]
+         } 
+
+//Ver mes anterior
+function mesantes() {
+  nuevomes=new Date() //nuevo objeto de fecha
+  primeromes--; //Restamos un día al 1 del mes visualizado
+  nuevomes.setTime(primeromes) //cambiamos fecha al mes anterior 
+  mescal=nuevomes.getMonth() //cambiamos las variables que usarán las funciones
+  annocal=nuevomes.getFullYear()
+  cabecera() //llamada a funcion de cambio de cabecera
+  escribirdias() //llamada a funcion de cambio de tabla.
+  }
+//ver mes posterior
+function mesdespues() {
+  nuevomes=new Date() //nuevo obejto fecha
+  tiempounix=primeromes.getTime() //tiempo de primero mes visible
+  tiempounix=tiempounix+(45*24*60*60*1000) //le añadimos 45 días 
+  nuevomes.setTime(tiempounix) //fecha con mes posterior.
+  mescal=nuevomes.getMonth() //cambiamos variables 
+  annocal=nuevomes.getFullYear()
+  cabecera() //escribir la cabecera 
+  escribirdias() //escribir la tabla
+  }
+//volver al mes actual
+function actualizar() {
+  mescal=hoy.getMonth(); //cambiar a mes actual
+  annocal=hoy.getFullYear(); //cambiar a año actual 
+  cabecera() //escribir la cabecera
+  escribirdias() //escribir la tabla
+  }
+
 var dia1 = 'Día de los santos inocentes';
                     var agenda = ["Error",
                               "Día de los santos inocentes",

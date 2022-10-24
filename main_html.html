@@ -74,7 +74,10 @@
         <div id="wrapper" style="text-align: center">
         <div id="calendario">
           
-        <h2>Noviembre 2017</h2>
+            <div id="anterior" onclick="mesantes()"></div>
+            <div id="posterior" onclick="mesdespues()"></div>
+
+        <h2 id="titulos">Noviembre 2017</h2>
             
         <table>
           <tr>
@@ -137,15 +140,18 @@
         <div id="formulario">
             <form>
                 <form>
+
         <textarea id="cuadroTexto" cols="40" rows="7">
         Aqui va el texto
         </textarea>
+
         <br />
+
         <input type="button" value="Limpiar" onClick="limpiar()">
-        </form>
-        
-        
+
+        </form>      
             </form>
+
         </div>
         </div>
 

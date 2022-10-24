@@ -256,6 +256,15 @@ nav a:hover{
 
 
 
+
+
+#anterior { float: left; width: 100px; font: bold 12pt arial;
+    padding: 0.5em 0.1em; cursor: pointer ; }
+#posterior { float: right; width: 100px; font: bold 12pt arial; 
+    padding: 0.5em 0.1em; cursor: pointer ;}
+#anterior:hover {color: blue;text-decoration: underline;}
+#posterior:hover {color: blue; text-decoration: underline;}
+
 #calendario{
     background: rgba(0, 0, 0, .1);
     border-radius: 5px;
