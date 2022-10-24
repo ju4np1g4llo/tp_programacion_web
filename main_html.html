@@ -72,36 +72,193 @@
 
     </div>
 
+    /*CALENDARIO*/
     <div id="cal">
-            <div class="top"> 
-                <span class="left button" id="prev"> &lang; </span> 
-                <span class="left hook"></span> 
-                <span class="month-year" id="label"> June 20&0 </span> 
-                <span class="right hook"></span> 
-                <span class="right button" id="next"> &rang; </span>
-            </div> 
-
-            <table id="days"> 
-                <td>sun</td> 
-                <td>mon</td> 
-                <td>tue</td> 
-                <td>wed</td> 
-                <td>thu</td> 
-                <td>fri</td> 
-                <td>sat</td>
-            </table> 
-
-            <div id="cal-frame"> 
-                <table class="curr"> 
-                    <tbody> 
-                        <tr><td class="nil"></td><td class="nil"></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr> 
-                        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td class="today">11</td><td>12</td></tr> 
-                        <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr> 
-                        <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr> 
-                        <tr><td>27</td><td>28</td><td>29</td><td>30</td><td class="nil"></td><td class="nil"></td><td class="nil"></td></tr> 
-                    </tbody> 
-                </table>
-            </div>
+        <style>
+            body {
+              line-height: 1;
+              margin: 50px;
+            }
+            #calendario{
+              background: rgba(0, 0, 0, .1);
+              border-radius: 5px;
+              box-sizing: border-box;
+              padding: 15px;
+              width: 300px;
+              margin: 0 auto;
+                display: inline-block;
+                vertical-align: top;
+            }
+             #formulario
+              {
+                  display: inline-block;
+                  vertical-align: top;
+              }
+            header {
+              overflow: clear;
+              position: relative;
+            }
+            h2 {
+              font-family: 'PT Sans Narrow', sans-serif;
+              font-size: 18px;
+              font-weight: 700;
+              margin: 0 0 10px;
+              text-align: center;
+            }
+            button {
+              position: absolute;
+              top: -4px;
+            }
+            button:first-child {
+              left: 0;
+            }
+            button:last-child {
+              right: 0;
+            }
+            table {
+              background: #fff;
+              border-collapse: collapse;
+              color: #222;
+              font-family: 'PT Sans', sans-serif;
+              font-size: 13px;
+              width: 100%;
+            }
+            td {
+              color: #444;
+              line-height: 22px;
+              text-align: center;
+            }
+            tr:first-child td {
+              color: #222;
+              font-weight: 700;
+            }
+          </style>
+        
+        </head>
+        
+        <body>
+        <div id="wrapper" style="text-align: center">
+        <div id="calendario">
+          <header>
+        <h2>Noviembre 2017</h2>
+            
+          </header>
+        <table>
+          <tr>
+            <td>L</td>
+            <td>M</td>
+            <td>Mi</td>
+            <td>J</td>
+            <td>V</td>
+            <td>S</td>
+            <td>D</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><input type="button" value="1" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="2" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="3" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="4" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="5" onClick="computadora(this.value)"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="6" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="7" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="8" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="9" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="10" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="11" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="12" onClick="computadora(this.value)"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="13" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="14" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="15" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="16" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="17" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="18" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="19" onClick="computadora(this.value)"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="20" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="21" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="22" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="23" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="24" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="25" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="26" onClick="computadora(this.value)"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="27" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="28" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="29" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="30" onClick="computadora(this.value)"></td>
+            <td><input type="button" value="31" onClick="computadora(this.value)"></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        </div>
+        <div id="formulario">
+            <form>
+                <form>
+        <textarea id="cuadroTexto" cols="40" rows="7">
+        Aqui va el texto
+        </textarea>
+        <br />
+        <input type="button" value="Limpiar" onClick="limpiar()">
+        </form>
+        
+        
+            </form>
+        </div>
+        </div>
+        
+        <script language="javascript">
+            var dia1 = 'Día de los santos inocentes';
+                    var agenda = ["Error",
+                              "Día de los santos inocentes",
+                                "Día de muertos",
+                                  "Se funda la villa de San Luis Potosí, hoy ciudad capital del estado del mismo nombre",
+                                  "Se establece la inquisición en México",
+                                  "Beber mucha agua",
+                                  "Empieza el gobierno del presidente Francisco I. Madero",
+                                  "Muere en sonora \"El héroe de Nacozari\", el ferrocarrilero Jésus García Corona ",
+                                  "Primer encuentro de Moctezuma con Hernán Cortés",
+                                  "La villa de tulancingo es elevada a la categoría de ciudad",
+                                  "Hoy será un buen día",
+                                  "Nace en la ciudad de México el escritor, novelista y ensayista Carlos Fuentes",
+                                  "Nace la poetisa mexicana Juana de ASbaje y Ramírez de Santillana, conocida como Sor Juana Inés de la Cruz",
+                                  "Muere asesinado Ignacio Comonfort, quien fuuera presidente de México",
+                                  "DÍA MUNDIAL DE LA DIABETES",
+                                  "Hoy seguro fue un buen día",
+                                  "Día del 16 de noviembre",
+                                  "Muere Alejandro Dumas hijo, autor de la celebre novela \"Las dama de las Camelias\"",
+                                  "Nace en la ciudad de San Luis Potosí, Ponciano Arriaga, abogado, periodista, orador y político liberal.",
+                                  "Nace en Guamúchil, Sinaloa, Pedro Infante Cruz, cantante y actor",
+                                  "Inicia el movimiento de la revolución mexicana",
+                                  "Muere el pintor Mario Orozco Rivera",
+                                  "Es asesinado el presidente de Estados Unidos John F. Kennedy.",
+                                  "Muere el compositor mexicano José Alfredo Jiménez en la ciudad de México",
+                                  "Por decreto de Porfirio Díaz, es creado en la parte oriental de la peninsula de yucatán, el territorio federal de Quintana Roo",
+                                  "Día de estudio",
+                                  "Muere el diseñador gráfico estadounidense Paul Rand a los 82 añs. Diseño los logotipos de IBM Wetinghouse, United Parcel Service y ABC",
+                                  "Preparación para finales 1",
+                                  "Un día especial",
+                                  "Un día no tan especial",
+                                  "Un gran dia",
+                                  "Nace jorge Negrete, cantante y actor del cine mexicano. "
+                             ];
+            function limpiar()
+            {
+                document.getElementById('cuadroTexto').value ='';
+            }
+            function computadora(day=dia1,form='cuadroTexto')
+            {
+                document.getElementById(form).value = agenda[day];
+            }
+            </script>
     </div>
 </footer>
 
