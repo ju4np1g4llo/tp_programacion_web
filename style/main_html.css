@@ -4,20 +4,20 @@ body{
     width: 100% ;
     margin-top: -2px;
     overflow-x: hidden;
-    background-image: url("https://img.freepik.com/vector-gratis/fondo-blanco-diseno-zigzag_1017-33197.jpg?w=740&t=st=1666272624~exp=1666273224~hmac=fe20e4af5c07341c55667045911613702752677272bcc3021ae343d9fe3c506a.jpg");
-    background-size: 100%;
+    background-image: url("https://img.freepik.com/foto-gratis/marron-beige-crema-claro-lujo-abstracto-como-fondo-modelo-textura-seda-algodon_1258-71591.jpg?w=826&t=st=1666635909~exp=1666636509~hmac=7dd2630c1a781949693e972d514283d2a15cb8c81f72d590f0c4c585d1720368.jpg");
+    background-size: 200%;
     }
 
 
 .header{
-    background-image: url("https://img.freepik.com/foto-gratis/muro-hormigon-gris_53876-88973.jpg?w=1380&t=st=1666211154~exp=1666211754~hmac=657aaea2fc76cec140bbbfdf980ce8028eceeb8fd924375607d7da99b8efb220.jpg");
+    background-image: url("https://img.freepik.com/foto-gratis/fondo-borroso-oscuro-abstracto-color-textura-degradado-suave-patron-sitio-web-brillante-brillante-encabezado-banner-o-imagen-arte-grafico-barra-lateral_1258-83074.jpg?w=826&t=st=1666635828~exp=1666636428~hmac=fe42181f5e33802056692d9ae127c3686f8e6f98b1039c5155a20019fbef4187.jpg");
     margin-top: -1%;
-    color: black;
+    color: white;
     background-size: 100% ;
     padding-top: 1%;
     padding-bottom: 1%;
     font-size: larger;
-    margin-left: -2px;
+    margin-left: -10px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -64,7 +64,7 @@ body{
     width: 300px; 
     height: 300px;
     padding: 10px;
-    border: 3px solid black;
+    border: 2px solid black;
     margin-top: 20px;
     margin-bottom: 20px;
     background: rgb(255, 255, 255);
@@ -93,15 +93,16 @@ body{
 
 .about-us{
     border-radius: 5px 5px 0px 0px;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: auto;
     padding: 10px;
-    border: 3px solid black;
+    border: 2px solid black;
     margin-top: 20px;
     margin-bottom: 20px;
     background: rgb(255, 255, 255);
     font-family: georgia;
     text-align: center;
+
 }
 
 .sector_pacientes{
@@ -109,7 +110,7 @@ body{
     width: 300px; 
     height: 300px;
     padding: 10px;
-    border: 3px solid black;
+    border: 2px solid black;
     margin-top: 20px;
     margin-bottom: 20px;
     background: rgb(255, 255, 255);
@@ -120,6 +121,7 @@ body{
     background-position: -40px;
     animation: imagenes-pacientes 5s infinite;
     animation-direction: alternate;
+    
 }
 
 @keyframes imagenes-pacientes{
@@ -136,7 +138,7 @@ body{
 }
 
 nav a{
-    font-size: large;
+    font-size: medium;
     text-align: center;
     margin-top: 110px;
     padding: 10px 25px;
@@ -145,10 +147,14 @@ nav a{
     background-color: white;
     text-decoration: none;
     display: block;
+    border: 2px solid black;
 }
+
 
 nav a:hover{
     background-color: grey;
+    font-size: larger;
+    border: 3px solid black;
 }
 
 
@@ -157,7 +163,7 @@ nav a:hover{
 .final-text-zone{
     border-radius: 5px 5px 0 0;
     width:42.5%;
-    height: 60px;
+    height: auto;
     padding-top: 1%;
     padding-bottom: 1%;
     border: 3px solid black;
@@ -168,12 +174,6 @@ nav a:hover{
     padding-left: 42%;
     margin-left: 7.5%;
     
-
-}
-
-.moving-text {
-    position: absolute;
-    margin-left: -195px;
 }
 
 .parrafo {
@@ -187,6 +187,7 @@ nav a:hover{
     display: inline-block;
     vertical-align: top;
     margin: 0;
+    margin-left: -195px;
 }
 
 .word {
