@@ -71,75 +71,11 @@
 
     /*CALENDARIO*/
     <div id="cal">
-        <style>
-            body {
-              line-height: 1;
-              margin: 50px;
-            }
-            #calendario{
-              background: rgba(0, 0, 0, .1);
-              border-radius: 5px;
-              box-sizing: border-box;
-              padding: 15px;
-              width: 300px;
-              margin: 0 auto;
-                display: inline-block;
-                vertical-align: top;
-            }
-             #formulario
-              {
-                  display: inline-block;
-                  vertical-align: top;
-              }
-            header {
-              overflow: clear;
-              position: relative;
-            }
-            h2 {
-              font-family: 'PT Sans Narrow', sans-serif;
-              font-size: 18px;
-              font-weight: 700;
-              margin: 0 0 10px;
-              text-align: center;
-            }
-            button {
-              position: absolute;
-              top: -4px;
-            }
-            button:first-child {
-              left: 0;
-            }
-            button:last-child {
-              right: 0;
-            }
-            table {
-              background: #fff;
-              border-collapse: collapse;
-              color: #222;
-              font-family: 'PT Sans', sans-serif;
-              font-size: 13px;
-              width: 100%;
-            }
-            td {
-              color: #444;
-              line-height: 22px;
-              text-align: center;
-            }
-            tr:first-child td {
-              color: #222;
-              font-weight: 700;
-            }
-          </style>
-        
-        </head>
-        
-        <body>
         <div id="wrapper" style="text-align: center">
         <div id="calendario">
-          <header>
+          
         <h2>Noviembre 2017</h2>
             
-          </header>
         <table>
           <tr>
             <td>L</td>
@@ -197,6 +133,7 @@
           </tr>
         </table>
         </div>
+
         <div id="formulario">
             <form>
                 <form>
@@ -211,51 +148,7 @@
             </form>
         </div>
         </div>
-        
-        <script language="javascript">
-            var dia1 = 'Día de los santos inocentes';
-                    var agenda = ["Error",
-                              "Día de los santos inocentes",
-                                "Día de muertos",
-                                  "Se funda la villa de San Luis Potosí, hoy ciudad capital del estado del mismo nombre",
-                                  "Se establece la inquisición en México",
-                                  "Beber mucha agua",
-                                  "Empieza el gobierno del presidente Francisco I. Madero",
-                                  "Muere en sonora \"El héroe de Nacozari\", el ferrocarrilero Jésus García Corona ",
-                                  "Primer encuentro de Moctezuma con Hernán Cortés",
-                                  "La villa de tulancingo es elevada a la categoría de ciudad",
-                                  "Hoy será un buen día",
-                                  "Nace en la ciudad de México el escritor, novelista y ensayista Carlos Fuentes",
-                                  "Nace la poetisa mexicana Juana de ASbaje y Ramírez de Santillana, conocida como Sor Juana Inés de la Cruz",
-                                  "Muere asesinado Ignacio Comonfort, quien fuuera presidente de México",
-                                  "DÍA MUNDIAL DE LA DIABETES",
-                                  "Hoy seguro fue un buen día",
-                                  "Día del 16 de noviembre",
-                                  "Muere Alejandro Dumas hijo, autor de la celebre novela \"Las dama de las Camelias\"",
-                                  "Nace en la ciudad de San Luis Potosí, Ponciano Arriaga, abogado, periodista, orador y político liberal.",
-                                  "Nace en Guamúchil, Sinaloa, Pedro Infante Cruz, cantante y actor",
-                                  "Inicia el movimiento de la revolución mexicana",
-                                  "Muere el pintor Mario Orozco Rivera",
-                                  "Es asesinado el presidente de Estados Unidos John F. Kennedy.",
-                                  "Muere el compositor mexicano José Alfredo Jiménez en la ciudad de México",
-                                  "Por decreto de Porfirio Díaz, es creado en la parte oriental de la peninsula de yucatán, el territorio federal de Quintana Roo",
-                                  "Día de estudio",
-                                  "Muere el diseñador gráfico estadounidense Paul Rand a los 82 añs. Diseño los logotipos de IBM Wetinghouse, United Parcel Service y ABC",
-                                  "Preparación para finales 1",
-                                  "Un día especial",
-                                  "Un día no tan especial",
-                                  "Un gran dia",
-                                  "Nace jorge Negrete, cantante y actor del cine mexicano. "
-                             ];
-            function limpiar()
-            {
-                document.getElementById('cuadroTexto').value ='';
-            }
-            function computadora(day=dia1,form='cuadroTexto')
-            {
-                document.getElementById(form).value = agenda[day];
-            }
-            </script>
+
     </div>
 </footer>
 

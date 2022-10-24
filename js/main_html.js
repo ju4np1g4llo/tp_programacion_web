@@ -104,126 +104,45 @@ setInterval(changeWord, 4000);
 
 
 
-
-
-<<<<<<< HEAD
-=======
-
-
-var CALENDAR = function () { 
-  var wrap, label,  
-          months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; 
-
-  function init(newWrap) { 
-    wrap     = $(newWrap || "#cal"); 
-	  label    = wrap.find("#label"); 
-
-    wrap.find("#prev").bind("click.calendar", function () { switchMonth(false); }); 
-    wrap.find("#next").bind("click.calendar", function () { switchMonth(true);  }); 
-    label.bind("click", function () { switchMonth(null, new Date().getMonth(), new Date().getFullYear()); });        
-  } 
-
-  function switchMonth(next, month, year) { 
-    var curr = label.text().trim().split(" "), calendar, tempYear =  parseInt(curr[1], 10); 
-    
-    month = month || ((next) ? ( (curr[0] === "December") ? 0 : months.indexOf(curr[0]) + 1 ) : ( (curr[0] === "January") ? 11 : months.indexOf(curr[0]) - 1 )); 
-    year = year || ((next && month === 0) ? tempYear + 1 : (!next && month === 11) ? tempYear - 1 : tempYear);
-  
-    //console.profile("createCal");
-    calendar =  createCal(year, month);
-    /*console.profileEnd("createCal");
-
-    $("#cal-frame", wrap) 
-	            .find(".curr") 
-	                .removeClass("curr") 
-	                .addClass("temp") 
-	            .end() 
-	            .prepend(calendar.calendar()) 
-	            .find(".temp") 
-	                .fadeOut("slow", function () { $(this).remove(); }); 
- 
-	        $('#label').text(calendar.label);
-  */} 
-
-  function createCal(year, month) { 
-    var day = 1, i, j, haveDays = true,  
-        startDay = new Date(year, month, day).getDay(), 
-        daysInMonths = [31, (((year%4==0)&&(year%100!=0))||(year%400==0)) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31], 
-        calendar = [];
-
-    if (createCal.cache[year]) { 
-      if (createCal.cache[year][month]) { 
-          return createCal.cache[year][month]; 
-      } 
-    } else { 
-        createCal.cache[year] = {}; 
-      }
-      i = 0; 
-      while (haveDays) { 
-          calendar[i] = []; 
-          for (j = 0; j < 7; j++) { 
-              if (i === 0) { 
-                  if (j === startDay) { 
-                      calendar[i][j] = day++; 
-                      startDay++; 
-                  } 
-              } else if (day <= daysInMonths[month]) { 
-                  calendar[i][j] = day++; 
-              } else { 
-                  calendar[i][j] = ""; 
-                  haveDays = false; 
-              } 
-              if (day > daysInMonths[month]) { 
-                  haveDays = false; 
-              } 
-          } 
-          i++; 
-      }
-      if (calendar[5]) { 
-        for (i = 0; i < calendar[5].length; i++) { 
-            if (calendar[5][i] !== "") { 
-                calendar[4][i] = "<span>" + calendar[4][i] + "</span><span>" + calendar[5][i] + "</span>"; 
-            } 
-        } 
-        calendar = calendar.slice(0, 5); 
-    }
-    for (i = 0; i < calendar.length; i++) { 
-	    calendar[i] = "<tr><td>" + calendar[i].join("</td><td>") + "</td></tr>"; 
-	} 
-	calendar = $("<table>" + calendar.join("") + "</table>").addClass("curr"); 
- 
-	$("td:empty", calendar).addClass("nil"); 
-	if (month === new Date().getMonth()) { 
-	    $('td', calendar).filter(function () { return $(this).text() === new Date().getDate().toString(); }).addClass("today"); 
-	} 
-  
-  createCal.cache[year][month] = { calendar : function () { return calendar.clone() }, label : months[month] + " " + year }; 
- 
-	return createCal.cache[year][month];
-  } 
-
-  createCal.cache = {}; 
-  return { 
-      init : init, 
-      switchMonth : switchMonth, 
-      createCal   : createCal 
-  }; 
-};
-
-
-	        
-
-
-
-        
-
-        
-
-      
-
-      
-
-
-
-    
->>>>>>> e704b12e297366811deb62be35f8b10e7c62fc01
+var dia1 = 'Día de los santos inocentes';
+                    var agenda = ["Error",
+                              "Día de los santos inocentes",
+                                "Día de muertos",
+                                  "Se funda la villa de San Luis Potosí, hoy ciudad capital del estado del mismo nombre",
+                                  "Se establece la inquisición en México",
+                                  "Beber mucha agua",
+                                  "Empieza el gobierno del presidente Francisco I. Madero",
+                                  "Muere en sonora \"El héroe de Nacozari\", el ferrocarrilero Jésus García Corona ",
+                                  "Primer encuentro de Moctezuma con Hernán Cortés",
+                                  "La villa de tulancingo es elevada a la categoría de ciudad",
+                                  "Hoy será un buen día",
+                                  "Nace en la ciudad de México el escritor, novelista y ensayista Carlos Fuentes",
+                                  "Nace la poetisa mexicana Juana de ASbaje y Ramírez de Santillana, conocida como Sor Juana Inés de la Cruz",
+                                  "Muere asesinado Ignacio Comonfort, quien fuuera presidente de México",
+                                  "DÍA MUNDIAL DE LA DIABETES",
+                                  "Hoy seguro fue un buen día",
+                                  "Día del 16 de noviembre",
+                                  "Muere Alejandro Dumas hijo, autor de la celebre novela \"Las dama de las Camelias\"",
+                                  "Nace en la ciudad de San Luis Potosí, Ponciano Arriaga, abogado, periodista, orador y político liberal.",
+                                  "Nace en Guamúchil, Sinaloa, Pedro Infante Cruz, cantante y actor",
+                                  "Inicia el movimiento de la revolución mexicana",
+                                  "Muere el pintor Mario Orozco Rivera",
+                                  "Es asesinado el presidente de Estados Unidos John F. Kennedy.",
+                                  "Muere el compositor mexicano José Alfredo Jiménez en la ciudad de México",
+                                  "Por decreto de Porfirio Díaz, es creado en la parte oriental de la peninsula de yucatán, el territorio federal de Quintana Roo",
+                                  "Día de estudio",
+                                  "Muere el diseñador gráfico estadounidense Paul Rand a los 82 añs. Diseño los logotipos de IBM Wetinghouse, United Parcel Service y ABC",
+                                  "Preparación para finales 1",
+                                  "Un día especial",
+                                  "Un día no tan especial",
+                                  "Un gran dia",
+                                  "Nace jorge Negrete, cantante y actor del cine mexicano. "
+                             ];
+            function limpiar()
+            {
+                document.getElementById('cuadroTexto').value ='';
+            }
+            function computadora(day=dia1,form='cuadroTexto')
+            {
+                document.getElementById(form).value = agenda[day];
+            }
