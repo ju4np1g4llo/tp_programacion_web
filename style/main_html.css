@@ -4,20 +4,20 @@ body{
     width: 100% ;
     margin-top: -2px;
     overflow-x: hidden;
-    background-image: url("https://img.freepik.com/vector-gratis/fondo-blanco-diseno-zigzag_1017-33197.jpg?w=740&t=st=1666272624~exp=1666273224~hmac=fe20e4af5c07341c55667045911613702752677272bcc3021ae343d9fe3c506a.jpg");
-    background-size: 100%;
+    background-image: url("https://img.freepik.com/foto-gratis/marron-beige-crema-claro-lujo-abstracto-como-fondo-modelo-textura-seda-algodon_1258-71591.jpg?w=826&t=st=1666635909~exp=1666636509~hmac=7dd2630c1a781949693e972d514283d2a15cb8c81f72d590f0c4c585d1720368.jpg");
+    background-size: 200%;
     }
 
 
 .header{
-    background-image: url("https://img.freepik.com/foto-gratis/muro-hormigon-gris_53876-88973.jpg?w=1380&t=st=1666211154~exp=1666211754~hmac=657aaea2fc76cec140bbbfdf980ce8028eceeb8fd924375607d7da99b8efb220.jpg");
+    background-image: url("https://img.freepik.com/foto-gratis/fondo-borroso-oscuro-abstracto-color-textura-degradado-suave-patron-sitio-web-brillante-brillante-encabezado-banner-o-imagen-arte-grafico-barra-lateral_1258-83074.jpg?w=826&t=st=1666635828~exp=1666636428~hmac=fe42181f5e33802056692d9ae127c3686f8e6f98b1039c5155a20019fbef4187.jpg");
     margin-top: -1%;
-    color: black;
+    color: white;
     background-size: 100% ;
     padding-top: 1%;
     padding-bottom: 1%;
     font-size: larger;
-    margin-left: -2px;
+    margin-left: -10px;
     width: 100%;
     display: flex;
     flex-direction: row;
