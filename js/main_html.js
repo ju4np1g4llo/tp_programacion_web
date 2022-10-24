@@ -6,28 +6,6 @@ var appVue1 = new Vue ({
   }
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var words = document.getElementsByClassName('word');
 var wordArray = [];
 var currentWord = 0;
@@ -55,7 +33,7 @@ function changeWord() {
 
 function animateLetterOut(cw, i) {
   setTimeout(function() {
-		cw[i].className = 'letter out';
+    cw[i].className = 'letter out';
   }, i*80);
 }
 
@@ -82,7 +60,6 @@ function splitLetters(word) {
 
 changeWord();
 setInterval(changeWord, 4000);
-
 
 
 

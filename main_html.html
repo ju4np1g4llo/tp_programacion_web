@@ -1,162 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16" href="./imagenes/favicon-16x16.png">
     <link rel="stylesheet" type="text/css" href="./style/main_html.css" />
+    <link rel="stylesheet" type="text/css" href="./pruebas/calendario.css" media="all"/>
+    
     
     <title>Easy-Files: Home Page</title>
-
+    
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script type="text/javascript" src="./js/main_html.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-</head>
-
-
-
-<body>
+  </head>
+  
+  
+  
+  <body>
     <div class="header">
-
-            <div class="easy-name">
+      
+      <div class="easy-name">
                 <h1 style="text-align:center">Easy Files</h1>
                 <p style="text-align: center">¡Informacion bien guardada! </p>
                 
+              </div>
+              
+              <img src="./imagenes/logo.jpg" alt="logoweb" style="height: 220px;position: absolute; padding-left: 1.5%;">
+              
+              <div class="date">
+                <p>Desarrollado en 2022</p>
+              </div>
             </div>
             
-            <img src="./imagenes/logo.jpg" alt="logoweb" style="height: 220px;position: absolute; padding-left: 1.5%;">
-            
-            <div class="date">
-               <p>Desarrollado en 2022</p>
-            </div>
-    </div>
-
-    <div class="cuerpo">
-
+            <div class="cuerpo">
+              
         <div class="sector_medicos">
-            <nav>
-                <a href="./lista_medicos.html">Nuestros Médicos</a>
-            </nav>
-        
-        </div>
-
-        <div class="about-us" id="app">
-            <h1> Sobre nosotros </h1>
-            {{about_us}} <br><br>{{about_us2}}
-        </div>
-
-        <div class="sector_pacientes">
-            <nav>
-                <a href="./lista_pacientes.html">Nuestros Pacientes</a>
-            </nav>
-        </div>
-
-    </div>
-
-</body>
-
-<footer>
-    <div class="final-text-zone">
-            <p class="p">Ordenar es </p>
-            <p class="parrafo">
-                <span class="word wisteria"> perfecto</span>
-                <span class="word belize"> increible</span>
-                <span class="word pomegranate"> poderoso</span>
-                <span class="word green"> hermoso</span>
-                <span class="word midnight"> sencillo</span>
-            </p>        
-
-    </div>
-
-    /*CALENDARIO*/
-    <div id="cal">
-        <div id="wrapper" style="text-align: center">
-        <div id="calendario">
+          <nav>
+            <a href="./lista_medicos.html">Nuestros Médicos</a>
+          </nav>
           
-            <div id="anterior" onclick="mesantes()"></div>
-            <div id="posterior" onclick="mesdespues()"></div>
-
-        <h2 id="titulos">Noviembre 2017</h2>
-            
-        <table>
-          <tr>
-            <td>L</td>
-            <td>M</td>
-            <td>Mi</td>
-            <td>J</td>
-            <td>V</td>
-            <td>S</td>
-            <td>D</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td><input type="button" value="1" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="2" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="3" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="4" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="5" onClick="computadora(this.value)"></td>
-          </tr>
-          <tr>
-            <td><input type="button" value="6" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="7" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="8" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="9" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="10" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="11" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="12" onClick="computadora(this.value)"></td>
-          </tr>
-          <tr>
-            <td><input type="button" value="13" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="14" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="15" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="16" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="17" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="18" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="19" onClick="computadora(this.value)"></td>
-          </tr>
-          <tr>
-            <td><input type="button" value="20" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="21" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="22" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="23" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="24" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="25" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="26" onClick="computadora(this.value)"></td>
-          </tr>
-          <tr>
-            <td><input type="button" value="27" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="28" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="29" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="30" onClick="computadora(this.value)"></td>
-            <td><input type="button" value="31" onClick="computadora(this.value)"></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
         </div>
-
-        <div id="formulario">
-            <form>
-                <form>
-
-        <textarea id="cuadroTexto" cols="40" rows="7">
-        Aqui va el texto
-        </textarea>
-
-        <br />
-
-        <input type="button" value="Limpiar" onClick="limpiar()">
-
-        </form>      
-            </form>
-
+        
+        <div class="about-us" id="app">
+          <h1> Sobre nosotros </h1>
+          {{about_us}} <br><br>{{about_us2}}
         </div>
+        
+        <div class="sector_pacientes">
+          <nav>
+            <a href="./lista_pacientes.html">Nuestros Pacientes</a>
+          </nav>
         </div>
-
-    </div>
-</footer>
-
-<script type="text/javascript" src="./js/main_html.js"></script>
-</html>
+        
+      </div>
+      
+    </body>
+    
+    <footer>
+      <div class="final-text-zone">
+        <p class="p">Ordenar es </p>
+        <p class="parrafo">
+          <span class="word wisteria"> perfecto</span>
+          <span class="word belize"> increible</span>
+          <span class="word pomegranate"> poderoso</span>
+          <span class="word green"> hermoso</span>
+          <span class="word midnight"> sencillo</span>
+        </p>        
+      </div>
+  </footer>
+  
+  <script type="text/javascript" src="./js/main_html.js"></script>
+  <script type="text/javascript" src="../tp_programacion_web/pruebas/calendario.js"></script>
+  </html>
+  
