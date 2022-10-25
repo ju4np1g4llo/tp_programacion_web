@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16" href="./imagenes/favicon-16x16.png">
     <link rel="stylesheet" type="text/css" href="./style/main_html.css" />
+    <link rel="stylesheet" type="text/css" href="./pruebas/calendario.css" media="all"/>
+    
     
     <title>Easy-Files: Home Page</title>
-
+    
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script type="text/javascript" src="./js/main_html.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-</head>
-
-
-
-<body>
+  </head>
+  
+  
+  
+  <body>
     <div class="header">
-
-            <div class="easy-name">
+      
+      <div class="easy-name">
                 <h1 style="text-align:center">Easy Files</h1>
                 <p style="text-align: center">¡Informacion bien guardada! </p>
                 
+              </div>
+              
+              <img src="./imagenes/logo.jpg" alt="logoweb" style="height: 220px;position: absolute; padding-left: 1.5%;">
+              
+              <div class="date">
+                <p>Desarrollado en 2022</p>
+              </div>
             </div>
             
-            <img src="./imagenes/logo.jpg" alt="logoweb" style="height: 220px;position: absolute; padding-left: 1.5%;">
-            
-            <div class="date">
-               <p>Desarrollado en 2022</p>
-            </div>
-    </div>
-
-    <div class="cuerpo">
-
+            <div class="cuerpo">
+              
         <div class="sector_medicos">
-            <nav>
-                <a href="./lista_medicos.html">Nuestros Médicos</a>
-            </nav>
+          <nav>
+            <a href="./lista_medicos.html">Nuestros Médicos</a>
+          </nav>
+          
+        </div>
         
-        </div>
-
         <div class="about-us" id="app">
-            <h1> Sobre nosotros </h1>
-            {{about_us}} <br><br>{{about_us2}}
+          <h1> Sobre nosotros </h1>
+          {{about_us}} <br><br>{{about_us2}}
         </div>
-
+        
         <div class="sector_pacientes">
-            <nav>
-                <a href="./lista_pacientes.html">Nuestros Pacientes</a>
-            </nav>
+          <nav>
+            <a href="./lista_pacientes.html">Nuestros Pacientes</a>
+          </nav>
         </div>
 
     </div>
