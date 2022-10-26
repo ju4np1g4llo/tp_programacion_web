@@ -1,103 +1,150 @@
 <template>
   <div class="final-text-zone">
-    <p class="p">Ordenar es </p>
-    <p class="parrafo">
-      <span class="word wisteria"> perfecto</span>
-      <span class="word belize"> increible</span>
-      <span class="word pomegranate"> poderoso</span>
-      <span class="word green"> hermoso</span>
-      <span class="word midnight"> sencillo</span>
-    </p>
-
+    <h1>Ordenar es
+      <span class="typed-text">{{ typeValue }}</span>
+      <span class="blinking-cursor">|</span>
+      <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+    </h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "bottom-words"
+  name: "bottom-words",
+  data: () => {
+    return {
+      typeValue: "",
+      typeStatus: false,
+      displayTextArray: ["Esencial", "Magnífico", "Increible", "Simple", "Fácil"],
+      typingSpeed: 50,
+      erasingSpeed: 100,
+      newTextDelay: 1000,
+      displayTextArrayIndex: 0,
+      charIndex: 0,
+    };
+  },
+  props: {},
+  created() {
+    setTimeout(this.typeText, this.newTextDelay + 200);
+  },
+  methods: {
+    typeText() {
+      if (this.charIndex < this.displayTextArray[this.displayTextArrayIndex].length) {
+        if (!this.typeStatus) this.typeStatus = true;
+        this.typeValue += this.displayTextArray[this.displayTextArrayIndex].charAt(
+            this.charIndex
+        );
+        this.charIndex += 1;
+        setTimeout(this.typeText, this.typingSpeed);
+      } else {
+        this.typeStatus = false;
+        setTimeout(this.eraseText, this.newTextDelay);
+      }
+    },
+    eraseText() {
+      if (this.charIndex > 0) {
+        if (!this.typeStatus) this.typeStatus = true;
+        this.typeValue = this.displayTextArray[this.displayTextArrayIndex].substring(
+            0,
+            this.charIndex - 1
+        );
+        this.charIndex -= 1;
+        setTimeout(this.eraseText, this.erasingSpeed);
+      } else {
+        this.typeStatus = false;
+        this.displayTextArrayIndex += 1;
+        if (this.displayTextArrayIndex >= this.displayTextArray.length)
+          this.displayTextArrayIndex = 0;
+        setTimeout(this.typeText, this.typingSpeed + 1000);
+      }
+    },
+  },
 }
 
 
 
 </script>
 
+
+
+
+
 <style scoped>
 .final-text-zone{
-  border-radius: 5px 5px 0 0;
-  width:42.5%;
+  border: 2px solid black;
+  width: 42.5%;
   height: auto;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  border: 3px solid black;
-  background: rgb(255, 255, 255);
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  padding-left: 42%;
-  margin-left: 7.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20%;
+  margin-left: 8.8%;
+  padding-right: 20%;
 
 }
 
-.parrafo {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-  margin-right: 265px;
+h1 {
+  font-size: 70px;
+  font-weight: normal;
+}
+span.typed-text {
+  color: deepskyblue;
 }
 
-.p{
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-  margin-left: -195px;
-}
+  .blinking-cursor {
+     font-size: 5rem;
+     color: #2c3e50;
+     -webkit-animation: 1s blink step-end infinite;
+     -moz-animation: 1s blink step-end infinite;
+     -ms-animation: 1s blink step-end infinite;
+     -o-animation: 1s blink step-end infinite;
+     animation: 1s blink step-end infinite;
+   }
 
-.word {
-  position: absolute;
-  width: 220px;
-  opacity: 0;
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #2c3e50;
+  }
 }
-
-.letter {
-  display: inline-block;
-  position: relative;
-  float: left;
-  transform: translateZ(25px);
-  transform-origin: 50% 50% 25px;
+@-moz-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #2c3e50;
+  }
 }
-
-.letter.out {
-  transform: rotateX(90deg);
-  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+@-webkit-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #2c3e50;
+  }
 }
-
-.letter.behind {
-  transform: rotateX(-90deg);
+@-ms-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #2c3e50;
+  }
 }
-
-.letter.in {
-  transform: rotateX(0deg);
-  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.wisteria {
-  color: #8e44ad;
-}
-
-.belize {
-  color: #2980b9;
-}
-
-.pomegranate {
-  color: #c0392b;
-}
-
-.green {
-  color: #16a085;
-}
-
-.midnight {
-  color: #2c3e50;
+@-o-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #2c3e50;
+  }
 }
 
 
