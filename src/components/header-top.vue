@@ -1,7 +1,7 @@
 <template>
   <div class="header">
 
-    <div class="easy-name">
+    <div class="easy">
       <h1 style="text-align:center">Easy Files</h1>
       <p style="text-align: center">¡Informacion bien guardada! </p>
 
@@ -34,11 +34,12 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   justify-content: space-around;
+  box-shadow: grey;
+  border-bottom: 3px solid #0a0a0a;
 
 }
-.easy-name{
+.easy{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size:x-large;
   margin-left: -8%;
@@ -49,5 +50,6 @@ export default {
   /*display: flex;
   flex-direction: column;*/
 }
+
 
 </style>
