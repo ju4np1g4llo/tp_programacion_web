@@ -2,10 +2,7 @@
   <div class="cuerpo">
 
     <div class="sector_medicos">
-      <nav>
-        <a href="./lista_medicos.vue">Nuestros Médicos</a>
-      </nav>
-
+      <span class="button-medics" v-on:click="$emit('menuEvent', 'Medicos')">Nuestros Médicos</span>
     </div>
 
     <div class="about-us">
@@ -15,23 +12,34 @@
     </div>
 
     <div class="sector_pacientes">
-      <nav>
-        <a href="./lista_pacientes.vue">Nuestros Pacientes</a>
-      </nav>
+      <span class="button-pacients" v-on:click="$emit('menuEvent', 'Pacientes')">Nuestros Pacientes</span>
     </div>
 
   </div>
+
+  <bottom-words/>
+
+  <br>
+
+  <calendar-block/>
+
 </template>
 
 <script>
+import bottomWords from "@/components/bottom-words";
+import calendarBlock from "@/components/calendar-block";
 
 export default {
-  name: "body-items"
+  name: "main-menu",
+  components:{
+    bottomWords,
+    calendarBlock,
+  },
+  emits: ['menuEvent']
 }
 </script>
 
 <style scoped>
-
 .cuerpo{
 
   width: 100%;
@@ -122,24 +130,23 @@ export default {
 
 }
 
-nav a{
+span{
   font-size: medium;
   text-align: center;
   margin-top: 110px;
   padding: 10px 25px;
   color: black;
-  padding: 10px;
   background-color: white;
-  text-decoration: none;
   display: block;
   border: 2px solid black;
 }
 
 
-nav a:hover{
+span:hover{
   background-color: grey;
   font-size: larger;
   border: 3px solid black;
+
 }
 
 
