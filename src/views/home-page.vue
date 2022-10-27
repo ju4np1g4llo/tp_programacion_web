@@ -10,8 +10,6 @@
     <pacientes-for v-if="menu.Pacientes2"/>
   </div>
 
-
-
 </div>
 
 
@@ -44,10 +42,9 @@ export default {
         activeOption: "mainMenu",
         mainMenu: true,
         Medicos: false,
+        Medicos2: false,
         Pacientes: false,
         Pacientes2: false
-
-
       }
     }
   },
@@ -59,7 +56,6 @@ export default {
       this.menu[this.menu.activeOption] = true;
     }
   },
-
 }
 </script>
 
@@ -70,6 +66,4 @@ export default {
   background-image: url("../assets/fondo-final.jpg");
   background-size: 200%;
 }
-
-
 </style>
