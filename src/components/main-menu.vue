@@ -19,6 +19,7 @@
 
   <bottom-words/>
 
+
   <br>
 
   <calendar-block/>
@@ -35,8 +36,27 @@ export default {
     bottomWords,
     calendarBlock,
   },
-  emits: ['menuEvent']
+  emits: ['menuEvent'],
+  data(){
+    return{
+      menu2:{
+        activeOption: "Pacientes",
+        Pacientes: true,
+        Pacientes2: false
+
+      }
+    }
+  },
+  methods: {
+    showMenuOptionSelected(option) {
+      let oldOption = this.menu.activeOption;
+      this.menu.activeOption = option;
+      this.menu[oldOption] = false;
+      this.menu[this.menu.activeOption] = true;
+    }
+  },
 }
+
 </script>
 
 <style scoped>

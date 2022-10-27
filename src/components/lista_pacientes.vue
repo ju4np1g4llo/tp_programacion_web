@@ -1,8 +1,9 @@
 <template>
 
   <div class="boton-form">
-    <span class="button-formulario1" v-on:click="$emit('formEvent', 'pacienteForm')">Agregar Paciente</span>
-    </div>
+    <span class="button-formulario1" v-on:click="$emit('menuEvent', 'Pacientes2')">Agregar Paciente </span>
+
+  </div>
 
 </template>
 
@@ -10,12 +11,10 @@
 
 export default {
   name: "lista_pacientes",
-  components:{
-
+  components: {},
+  emits: ['menuEvent'],
 }
 
-
-}
 </script>
 
 <style scoped>
