@@ -80,11 +80,11 @@ export default {
   padding-left: 20%;
   margin-left: 8.8%;
   padding-right: 20%;
-
+  padding-bottom: 1.5%;
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 50px;
   font-weight: normal;
 }
 span.typed-text {

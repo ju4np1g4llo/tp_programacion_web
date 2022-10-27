@@ -42,10 +42,8 @@
 </template>
 
 <script>
-
-
 export default {
-  name: "calendar-block"
+  name: "calendar-block",
 }
 </script>
 
