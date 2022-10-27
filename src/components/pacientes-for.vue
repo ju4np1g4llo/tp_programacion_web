@@ -1,12 +1,10 @@
 <template>
-  <header-top></header-top>
   <form
       action="mailto:peinchaust@ucema.edu.ar" method="post" enctype="text/plain">
 
 
     <fieldset>
       <legend>IDENTIFICACION PERSONAL</legend>
-
 
       <table border="0">
         <tbody>
@@ -20,10 +18,16 @@
           </td>
         </tr>
         <tr>
+          <td>Fecha de nacimiento</td>
+          <td>
+            <input type=date name="fecha de nacimiento" id=""
+          </td>
+        </tr>
+        <tr>
           <td>Edad</td>
           <td>
-            <input type="number" name="edad" id="" value="18"
-                   step="0.5">
+            <input type="number" name="edad" id=""
+                   step="1">
           </td>
         </tr>
         <tr>
@@ -31,37 +35,89 @@
           <td>
             <input type="radio" name="sexo" id="" value="M">Masc.
             <input type="radio" name="sexo" id="" value="F">Fem.
-            <input type="radio" name="sexo" id="" value="O">Otro
-            <input type="radio" name="sexo" id="" value="PNO">Pref. no decir
-
 
           </td>
         </tr>
         <tr>
+          <td>Altura</td>
+          <td>
+            <input type="number" name="altura" id="">m
+          </td>
+        </tr>
+        <tr>
+          <td>Peso</td>
+          <td>
+            <input type="number" name="peso" id="">Kg
+          </td>
+
+        </tr>
+        <tr>
+          <td>Obra social</td>
+          <td>
+            <input type="radio" name="obra social" id="" value="SI">SI
+            <input type="radio" name="obra social" id="" value="NO">NO
+            <input type="text" name="obra social" id="" placeholder="Ingrese la obra social">
+            <input type="numbre" name="obra social" id="" placeholder="Ingrese el numero de obra social"
+          </td>
+
+        </tr>
+        <tr>
+          <td>Direccion</td>
+          <input type="text" name="direccion" id="">
+        </tr>
+        <tr>
           <td>Teléfono</td>
           <td>
-            <select name="prefijo" id="">
-              <option value="+51">Perú</option>
-              <option value="+549" selected>Argentina</option>
-              <option value="+55">Brasil</option>
-              <option value="+56">Chile</option>
-              <option value="+595">Paraguay</option>
-              <option value="+598">Uruguay</option>
-            </select>
             <input type="text" name="" id=""
-                   maxlength="10">
+                   maxlength="10" value="+54">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="email" name="mail" id="" value="@">
           </td>
         </tr>
         </tbody>
       </table>
-      <label for="mailCV">Mail: </label>
-      <input type="email" name="mailCV" id="" value="@">
+
     </fieldset>
 
     <br>
 
 
     <br><br>
+    <fieldset>
+      <legend>ANTECEDENTES MEDICOS</legend>
+      <table>
+        <tbody>
+        <tr>
+          <td>Grupo sanguineo</td>
+          <td>
+            <select name="sangre" id="">
+              <option value="tipo de sangre:">A+</option>
+              <option value="tipo de sangre:">A-</option>
+              <option value="tipo de sangre:">B+</option>
+              <option value="tipo de sangre:">B-</option>
+              <option value="tipo de sangre:">O+</option>
+              <option value="tipo de sangre:">O-</option>
+              <option value="tipo de sangre:">AB+</option>
+              <option value="tipo de sangre:">AB-</option>
+
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Alergias</td>
+
+        </tr>
+        </tbody>
+      </table>
+    </fieldset>
+
+    <br>
+
+
+    <br>
     <input type="submit" value="Enviar">
     <input type="reset" value="Borrar Formulario">
 
@@ -69,13 +125,11 @@
 </template>
 
 <script>
-import HeaderTop from "@/App";
-
-
 export default {
-  name: 'pacientes-for',
-  components: {
-    HeaderTop,
-  }
+  name: "Form"
 }
 </script>
+
+<style scoped>
+
+</style>
