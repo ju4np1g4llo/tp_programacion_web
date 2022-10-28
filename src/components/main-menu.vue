@@ -19,22 +19,15 @@
 
   <bottom-words/>
 
-
-  <br>
-
-  <calendar-block/>
-
 </template>
 
 <script>
 import bottomWords from "@/components/bottom-words";
-import calendarBlock from "@/components/calendar-block";
 
 export default {
   name: "main-menu",
   components:{
     bottomWords,
-    calendarBlock,
   },
   emits: ['menuEvent'],
   data(){
@@ -66,9 +59,9 @@ export default {
   margin-top: 30px;
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
+   justify-content: space-evenly;
   flex-direction: row;
+  overflow-x: hidden;
 
 }
 
