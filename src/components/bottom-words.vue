@@ -81,6 +81,7 @@ export default {
   margin-left: 8.8%;
   padding-right: 20%;
   padding-bottom: 1.5%;
+  background-color: white;
 }
 
 h1 {
