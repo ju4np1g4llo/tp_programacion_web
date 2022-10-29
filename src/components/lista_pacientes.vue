@@ -5,6 +5,22 @@
 
   </div>
 
+  <div>
+    <table id="tabla_pacientes">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Nombre</th>
+          <th>Numero de Paciente</th>
+          <th>Tipo de Consulta</th>
+          <th>Numero de Obras Social</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
 </template>
 
 <script>
