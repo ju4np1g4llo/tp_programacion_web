@@ -58,4 +58,9 @@ h2{
   margin-bottom: 1%;
   margin-top: -2%;
 }
+
+.explicacion1:hover {
+  background-color: grey;
+  border: 3px solid black;
+}
 </style>
