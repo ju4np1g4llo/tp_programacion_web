@@ -19,15 +19,20 @@
 
   <bottom-words/>
 
+  <como-funciona/>
+
 </template>
 
 <script>
 import bottomWords from "@/components/bottom-words";
+import comoFunciona from "@/components/como-funciona";
 
 export default {
   name: "main-menu",
   components:{
     bottomWords,
+    comoFunciona,
+
   },
   emits: ['menuEvent'],
   data(){
@@ -54,15 +59,12 @@ export default {
 
 <style scoped>
 .cuerpo{
-
   width: 100%;
   margin-top: 30px;
   margin-bottom: 20px;
   display: flex;
    justify-content: space-evenly;
   flex-direction: row;
-  overflow-x: hidden;
-
 }
 
 .sector_medicos{

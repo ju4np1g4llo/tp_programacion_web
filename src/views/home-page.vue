@@ -25,6 +25,7 @@ import pacientesFor from "@/components/pacientes-for";
 
 
 
+
 export default {
   name: 'App',
   components: {
