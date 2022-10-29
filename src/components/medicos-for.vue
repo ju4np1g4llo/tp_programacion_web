@@ -1,12 +1,9 @@
 <template>
   <header-top/>
-  <div class="boton-form-exit">
-    <span class="button-formulario1" v-on:click="$emit('menuEvent', 'Pacientes2')">Volver </span>
-  </div>
 
   <form action="mailto:peinchaust@ucema.edu.ar" method="post" enctype="text/plain">
     <fieldset>
-      <legend>IDENTIFICACION PERSONAL</legend>
+      <legend>IDENTIFICACION MEDICOS</legend>
         <table border="0">
           <tbody> placeholder="Ingrese el Nombre y Apellido">
             <tr>

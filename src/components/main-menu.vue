@@ -37,10 +37,12 @@ export default {
   emits: ['menuEvent'],
   data(){
     return{
-      menu2:{
-        activeOption: "Pacientes",
-        Pacientes: true,
-        Pacientes2: false
+      menu:{
+        activeOption: "",
+        Pacientes: false,
+        Pacientes2: false,
+        Medicos: true,
+        Medicos2:false,
 
       }
     }
