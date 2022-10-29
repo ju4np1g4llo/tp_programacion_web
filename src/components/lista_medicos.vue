@@ -1,7 +1,10 @@
 <template>
   <div class="boton-form">
-    <span class="button-formulario1" v-on:click="$emit('menuEvent', 'Medicos2')">Agregar Médico </span>
+    <span class="button-volver" v-on:click="$emit('menuEvent', 'mainMenu')">Volver atrás </span>
+    <span class="button-agregar" v-on:click="$emit('menuEvent', 'Medicos2')">Agregar Médico </span>
   </div>
+
+
 
   <div>
     <table id="tabla_pacientes">
@@ -27,6 +30,14 @@ export default {
   name: "lista_medicos",
   components: {},
   emits: ['menuEvent'],
+  methods: {
+    showMenuOptionSelected(option) {
+      let oldOption = this.menu.activeOption;
+      this.menu.activeOption = option;
+      this.menu[oldOption] = false;
+      this.menu[this.menu.activeOption] = true;
+    }
+  },
   }
 
 </script>
@@ -37,7 +48,6 @@ export default {
   width: 100%;
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
   flex-direction: row;
   padding-top: 3%;
 }
@@ -58,5 +68,13 @@ span:hover{
   font-size: larger;
   border: 3px solid black;
 
+}
+
+.button-agregar{
+  margin-left: 29.5%;
+}
+
+.button-volver{
+  margin-left: 10%;
 }
 </style>

@@ -35,18 +35,6 @@ export default {
 
   },
   emits: ['menuEvent'],
-  data(){
-    return{
-      menu:{
-        activeOption: "",
-        Pacientes: false,
-        Pacientes2: false,
-        Medicos: true,
-        Medicos2:false,
-
-      }
-    }
-  },
   methods: {
     showMenuOptionSelected(option) {
       let oldOption = this.menu.activeOption;

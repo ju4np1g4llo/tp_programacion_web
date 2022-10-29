@@ -1,6 +1,10 @@
 <template>
   <header-top/>
 
+  <div class="boton-form-exit">
+   <span class="button-volver" v-on:click="$emit('menuEvent', 'Medicos')">Volver atrás </span>
+  </div>
+
   <form action="mailto:peinchaust@ucema.edu.ar" method="post" enctype="text/plain">
     <fieldset>
       <legend>IDENTIFICACION MEDICOS</legend>
@@ -119,7 +123,16 @@ export default {
   name: 'pacientes-for',
   components: {
     HeaderTop,
-  }
+  },
+  emits: ['menuEvent'],
+  methods: {
+    showMenuOptionSelected(option) {
+      let oldOption = this.menu.activeOption;
+      this.menu.activeOption = option;
+      this.menu[oldOption] = false;
+      this.menu[this.menu.activeOption] = true;
+    }
+  },
 }
 </script>
 
@@ -149,6 +162,6 @@ span:hover{
   background-color: grey;
   font-size: larger;
   border: 3px solid black;
-
 }
+
 </style>

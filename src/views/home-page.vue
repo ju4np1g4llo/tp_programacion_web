@@ -7,8 +7,8 @@
     <main-menu v-if="menu.mainMenu" v-on:menuEvent="showMenuOptionSelected"/>
     <lista_medicos v-if="menu.Medicos" v-on:menuEvent="showMenuOptionSelected"/>
     <lista_pacientes v-if="menu.Pacientes" v-on:menuEvent="showMenuOptionSelected"/>
-    <pacientes-for v-if="menu.Pacientes2"/>
-    <medicos-for v-if="menu.Medicos2"/>
+    <pacientes-for v-if="menu.Pacientes2" v-on:menuEvent="showMenuOptionSelected"/>
+    <medicos-for v-if="menu.Medicos2" v-on:menuEvent="showMenuOptionSelected"/>
   </div>
 
 </div>
