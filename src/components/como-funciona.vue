@@ -57,11 +57,9 @@ h2{
   flex-direction: row;
   margin-bottom: 1%;
   margin-top: -2%;
-  margin-left: -4%;
+  /*margin-left: -4%;*/
+  width: 100%;
+  margin-left: 0.75vw;
 }
 
-.explicacion1:hover {
-  background-color: grey;
-  border: 3px solid black;
-}
 </style>
