@@ -125,14 +125,6 @@ export default {
     HeaderTop,
   },
   emits: ['menuEvent'],
-  methods: {
-    showMenuOptionSelected(option) {
-      let oldOption = this.menu.activeOption;
-      this.menu.activeOption = option;
-      this.menu[oldOption] = false;
-      this.menu[this.menu.activeOption] = true;
-    }
-  },
 }
 </script>
 

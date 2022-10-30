@@ -1,7 +1,8 @@
 <template>
 
   <div class="boton-form">
-    <span class="button-formulario1" v-on:click="$emit('menuEvent', 'Pacientes2')">Agregar Paciente </span>
+    <span class="button-volver" v-on:click="$emit('menuEvent', 'mainMenu')">Volver atrás </span>
+    <span class="button-agregar" v-on:click="$emit('menuEvent', 'Pacientes2')">Agregar Paciente </span>
 
   </div>
 
@@ -39,9 +40,12 @@ export default {
   width: 100%;
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
   flex-direction: row;
   padding-top: 3%;
+}
+
+.button-volver{
+  margin-left: 10%;
 }
 
 span{
@@ -60,5 +64,9 @@ span:hover{
   font-size: larger;
   border: 3px solid black;
 
+}
+
+.button-agregar{
+  margin-left: 29.5%;
 }
 </style>

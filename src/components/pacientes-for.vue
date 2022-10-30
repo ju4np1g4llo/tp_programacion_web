@@ -1,7 +1,7 @@
 <template>
   <header-top/>
   <div class="boton-form-exit">
-    <span class="button-formulario1" v-on:click="$emit('menuEvent', 'Pacientes2')">Volver </span>
+    <span class="button-volver" v-on:click="$emit('menuEvent', 'Pacientes')">Volver atrás </span>
   </div>
 
   <form action="mailto:peinchaust@ucema.edu.ar" method="post" enctype="text/plain">
@@ -122,7 +122,8 @@ export default {
   name: 'pacientes-for',
   components: {
     HeaderTop,
-  }
+  },
+  emits: ['menuEvent']
 }
 </script>
 
