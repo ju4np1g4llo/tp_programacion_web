@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 .funciona{
-  width: 25%;
+  width: auto;
   padding-left: 6%;
   border: 2px solid black;
   background-color: white;
@@ -57,6 +57,7 @@ h2{
   flex-direction: row;
   margin-bottom: 1%;
   margin-top: -2%;
+  margin-left: -4%;
 }
 
 .explicacion1:hover {
