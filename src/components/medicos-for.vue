@@ -57,6 +57,7 @@
   <br>
   <br>
   <input type="submit" value="Enviar">
+    &nbsp;
   <input type="reset" value="Borrar Formulario">
 
   </form>

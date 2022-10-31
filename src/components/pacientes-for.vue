@@ -174,6 +174,7 @@
   <br>
 <div class="enviar-borrar">
   <input type="submit" value="Enviar">
+  &nbsp;
   <input type="reset" value="Borrar Formulario">
 </div>
 
