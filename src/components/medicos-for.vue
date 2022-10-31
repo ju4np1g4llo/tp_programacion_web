@@ -121,6 +121,16 @@ input[type=reset]{
   display: block;
   border: 2px solid black;
 }
+input[type=reset]:hover{
+  background-color: grey;
+  font-size: larger;
+  border: 3px solid black;
+}
+input[type=submit]:hover{
+  background-color: grey;
+  font-size: larger;
+  border: 3px solid black;
+}
 
 
 </style>
