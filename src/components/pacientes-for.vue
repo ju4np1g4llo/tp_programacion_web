@@ -233,4 +233,22 @@ span:hover{
   display:flex;
   flex-flow: column-reverse;
 }
+input[type=submit] {
+  font-size: medium;
+  text-align: center;
+  padding: 10px 25px;
+  color: black;
+  background-color: white;
+  display: block;
+  border: 2px solid black;
+}
+input[type=reset] {
+  font-size: medium;
+  text-align: center;
+  padding: 10px 25px;
+  color: black;
+  background-color: white;
+  display: block;
+  border: 2px solid black;
+}
 </style>

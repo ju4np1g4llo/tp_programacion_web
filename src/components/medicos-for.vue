@@ -58,7 +58,7 @@
   <br>
   <input type="submit" value="Enviar">
     &nbsp;
-  <input type="reset" value="Borrar Formulario">
+  <input type="reset" value="Borrar Formulario" class="btn btn-green">
 
   </form>
 </template>
@@ -103,5 +103,24 @@ span:hover{
   font-size: larger;
   border: 3px solid black;
 }
+input[type=submit]{
+  font-size: medium;
+  text-align: center;
+  padding: 10px 25px;
+  color: black;
+  background-color: white;
+  display: block;
+  border: 2px solid black;
+}
+input[type=reset]{
+  font-size: medium;
+  text-align: center;
+  padding: 10px 25px;
+  color: black;
+  background-color: white;
+  display: block;
+  border: 2px solid black;
+}
+
 
 </style>
