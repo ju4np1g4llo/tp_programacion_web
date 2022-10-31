@@ -95,7 +95,6 @@
       <tbody>
       <tr>
         <td>Grupo sanguineo</td>
-        &nbsp;
         <td>
           <select name="sangre" id="">
             <option value="tipo de sangre:">A+</option>
@@ -110,19 +109,61 @@
           </select>
         </td>
       </tr>
+      <br>
+      <br>
       <tr>
-        <td>Alergias:</td> <td>Antibioticos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
-                           <td>Medicamentos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
-                           <td>Alimentos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
-                           <td>Animales</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
-                           <td>Picaduras</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
+        <td class="titulo-alergias">Alergias</td>
+
+        <div class="alergias">
+          <div>
+            <td>Antibioticos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
+          </div>
+          <br>
+          <div>
+            <td>Medicamentos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
+          </div>
+          <br>
+          <div>
+            <td>Alimentos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
+          </div>
+          <br>
+          <div>
+            <td>Animales</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
+          </div>
+          <br>
+          <div>
+            <td>Picaduras</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
+          </div>
+        </div>
       </tr>
+      <br>
       <tr>
-        <td>Antecedentes de enfermedades e intervenciones quirurgicas anteriores de importancia</td> <td> <input type="text" name="cirugias" id=""></td>
+        <td>Antecedentes de enfermedades e intervenciones quirurgicas anteriores de importancia</td>
+        <td>
+          <textarea name="" id="" cols="50" rows="5" maxlength="500"></textarea>
+        </td>
       </tr>
-      <tr>Padece alguna enfermedad cronica?</tr> <input type="radio" name="cronica" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
-      <tr>Toma algun medicamento cotidianamente?</tr> <input type="radio" name="medicamento" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
-      <tr>Otras obvervaciones</tr> <input type="text" name="observaciones" id="">
+      <br>
+      <tr>
+        <td>Padece alguna enfermedad cronica?</td>
+        <div>
+          <input type="radio" name="cronica" id="" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
+        </div>
+      </tr>
+      <br>
+      <tr>
+        <td>Toma algun medicamento?</td>
+        <div>
+          <input type="radio" name="cronica" id="" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
+        </div>
+      </tr>
+      <br>
+      <tr>Otras obvervaciones</tr>
+      <td>
+        <textarea
+            name="" id="" cols="50" rows="5"
+            maxlength="500"></textarea>
+      </td>
       </tbody>
     </table>
   </fieldset>
@@ -180,5 +221,15 @@ span:hover{
   border: 3px solid black;
 
 }
-
+.alergias{
+  display:flex;
+  flex-direction: column;
+}
+.titulo-alergias{
+  align-items: first;
+}
+.medicamento{
+  display:flex;
+  flex-flow: column-reverse;
+}
 </style>
