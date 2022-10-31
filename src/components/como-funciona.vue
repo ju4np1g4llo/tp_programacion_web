@@ -29,20 +29,22 @@ export default {
 <style scoped>
 .funciona{
   width: auto;
-  padding-left: 6%;
+  padding-left: 4%;
   border: 2px solid black;
   background-color: white;
   margin-left: 8.8%;
 }
 
 h2{
-  padding-left: 4%;
+  padding-left: 1%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
 }
 
 .funciona img {
   margin-left: -9%;
   margin-top: -4%;
+  padding-left: 3%;
 }
 
 .explicacion1{
@@ -50,16 +52,16 @@ h2{
   border: 2px solid black;
   background-color: white;
   padding: 1%;
-  width: 10%;
+  width: auto;
 }
 .comofunciona{
   display: flex;
   flex-direction: row;
   margin-bottom: 1%;
   margin-top: -2%;
-  /*margin-left: -4%;*/
+  margin-left: -4.2%;
   width: 100%;
-  margin-left: 0.75vw;
+  justify-content: space-evenly;
 }
 
 </style>
