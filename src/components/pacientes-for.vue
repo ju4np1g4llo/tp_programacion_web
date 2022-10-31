@@ -7,70 +7,83 @@
   <form action="mailto:peinchaust@ucema.edu.ar" method="post" enctype="text/plain">
     <fieldset>
       <legend>IDENTIFICACION PERSONAL</legend>
-        <table border="0">
-          <tbody> placeholder="Ingrese el Nombre y Apellido">
+        <table>
+          <tbody>
             <tr>
-    <td>Fecha de nacimiento</td>
-    <td>
-      <input type=date name="fecha de nacimiento" id="">
-    </td>
-  </tr>
-  <tr>
-    <td>Edad</td>
-    <td>
-  <input type="number" name="edad" id=""
-         step="1">
-  </td>
-  </tr>
-  <tr>
-    <td>Sexo</td>
-    <td>
-      <input type="radio" name="sexo" id="" value="M">Masc.
-      <input type="radio" name="sexo" id="" value="F">Fem.
-  </td>
-  </tr>
-  <tr>
-    <td>Altura</td>
-    <td>
-      <input type="number" name="altura" id="">m
-    </td>
-  </tr>
-  <tr>
-    <td>Peso</td>
-    <td>
-      <input type="number" name="peso" id="">Kg
-    </td>
+              <td>Fecha de nacimiento</td>
+              &nbsp;
+              <td>
+                <input type=date name="fecha de nacimiento" id="">
+              </td>
+            </tr>
+            <tr>
+              <td>Edad</td>
+              &nbsp;
+              <td>
+            <input type="number" name="edad" id=""
+                   step="1">
+            </td>
+            </tr>
+            <tr>
+              <td>Sexo</td>
+              &nbsp;
+              <td>
+                <input type="radio" name="sexo" id="" value="M">Masc.
+                <input type="radio" name="sexo" id="" value="F">Fem.
+            </td>
+            </tr>
+            <tr>
+              <td>Altura</td>
+              &nbsp;
+              <td>
+                <input type="number" name="altura" id="">&nbsp;m
+              </td>
+            </tr>
+            <tr>
+              <td>Peso</td>
+              &nbsp;
+              <td>
+                <input type="number" name="peso" id=""> &nbsp;Kg
+              </td>
 
-  </tr>
-  <tr>
-    <td>Obra social</td>
-    <td>
-      <input type="radio" name="obra social" id="" value="SI">SI
-      <input type="radio" name="obra social" id="" value="NO">NO
-      <input type="text" name="obra social" id="" placeholder="Ingrese la obra social">
-      <input type="numbre" name="obra social" id="" placeholder="Ingrese el numero de obra social">
-    </td>
+            </tr>
+            <tr>
+              <td>Obra social</td>
+              &nbsp;
+              <td>
+                <input type="radio" name="obra social" id="" value="SI">SI
+                <input type="radio" name="obra social" id="" value="NO">NO
+                <input type="text" name="obra social" id="" placeholder="Ingrese la obra social">
+                &nbsp;
+                <input type="numbre" name="obra social" id="" placeholder="Ingrese el numero de obra social">
+              </td>
 
-  </tr>
-  <tr>
-    <td>Direccion</td>
-    <input type="text" name="direccion" id="">
-  </tr>
-  <tr>
-    <td>Teléfono</td>
-    <td>
-  <input type="text" name="" id=""
-  maxlength="10" value="+54">
-  </td>
-  </tr>
-  <tr>
-    <td>
-      <input type="email" name="mail" id="" value="@">
-    </td>
-  </tr>
-  </tbody>
-  </table>
-  </fieldset>
+            </tr>
+            <tr>
+              <td>Direccion</td>
+              &nbsp;
+              <td>
+                <input type="text" name="direccion" id="">
+              </td>
+            </tr>
+            <tr>
+              <td>Teléfono</td>
+              &nbsp;
+              <td>
+                <input type="text" name="" id=""
+            maxlength="10" value="+54">
+              </td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              &nbsp;
+              <td>
+                <input type="email" name="mail" id="" value="@">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </fieldset>
 
   <br>
 
@@ -82,6 +95,7 @@
       <tbody>
       <tr>
         <td>Grupo sanguineo</td>
+        &nbsp;
         <td>
           <select name="sangre" id="">
             <option value="tipo de sangre:">A+</option>
@@ -97,9 +111,18 @@
         </td>
       </tr>
       <tr>
-        <td>Alergias</td>
-
+        <td>Alergias:</td> <td>Antibioticos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
+                           <td>Medicamentos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
+                           <td>Alimentos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
+                           <td>Animales</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
+                           <td>Picaduras</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
       </tr>
+      <tr>
+        <td>Antecedentes de enfermedades e intervenciones quirurgicas anteriores de importancia</td> <td> <input type="text" name="cirugias" id=""></td>
+      </tr>
+      <tr>Padece alguna enfermedad cronica?</tr> <input type="radio" name="cronica" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
+      <tr>Toma algun medicamento cotidianamente?</tr> <input type="radio" name="medicamento" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO <input type="text" id="">Cual?
+      <tr>Otras obvervaciones</tr> <input type="text" name="observaciones" id="">
       </tbody>
     </table>
   </fieldset>
@@ -108,8 +131,10 @@
 
 
   <br>
+<div class="enviar-borrar">
   <input type="submit" value="Enviar">
   <input type="reset" value="Borrar Formulario">
+</div>
 
   </form>
 </template>
@@ -155,4 +180,5 @@ span:hover{
   border: 3px solid black;
 
 }
+
 </style>
