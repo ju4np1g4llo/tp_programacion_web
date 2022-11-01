@@ -196,7 +196,6 @@ export default {
 
 <style scoped>
 .boton-form-exit{
-
   width: 100%;
   margin-bottom: 20px;
   display: flex;
@@ -241,7 +240,7 @@ input[type=submit] {
   background-color: white;
   display: block;
   border: 2px solid black;
-  margin-left: 325px;
+  margin-left: 375px;
 }
 input[type=reset] {
   font-size: medium;
@@ -267,5 +266,14 @@ input[type=submit]:hover{
   display: flex;
   flex-direction: row;
   margin-left:10%;
+  margin-bottom: 3%;
+}
+
+form{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+fieldset{
+  background-color: white;
 }
 </style>
