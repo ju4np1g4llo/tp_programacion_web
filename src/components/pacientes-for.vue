@@ -173,9 +173,9 @@
 
   <br>
 <div class="enviar-borrar">
-  <input type="submit" value="Enviar">
-  &nbsp;
   <input type="reset" value="Borrar Formulario">
+  &nbsp;
+  <input type="submit" value="Enviar">
 </div>
 
   </form>
@@ -241,6 +241,7 @@ input[type=submit] {
   background-color: white;
   display: block;
   border: 2px solid black;
+  margin-left: 325px;
 }
 input[type=reset] {
   font-size: medium;
@@ -260,5 +261,11 @@ input[type=submit]:hover{
   background-color: grey;
   font-size: larger;
   border: 3px solid black;
+}
+
+.enviar-borrar{
+  display: flex;
+  flex-direction: row;
+  margin-left:10%;
 }
 </style>
