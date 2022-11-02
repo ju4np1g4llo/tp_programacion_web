@@ -1,20 +1,15 @@
 <template>
   <div id="main">
-    <home-page/>
+    <router-view/>
   </div>
 
 </template>
 
 <script>
-import homePage from "@/views/home-page";
-
 
 export default {
   name: 'App',
-  components: {
-    homePage,
 
-  }
 
 }
 </script>

@@ -4,11 +4,7 @@
   <header-top/>
 
   <div>
-    <main-menu v-if="menu.mainMenu" v-on:menuEvent="showMenuOptionSelected"/>
-    <lista_medicos v-if="menu.Medicos" v-on:menuEvent="showMenuOptionSelected"/>
-    <lista_pacientes v-if="menu.Pacientes" v-on:menuEvent="showMenuOptionSelected"/>
-    <pacientes-for v-if="menu.Pacientes2" v-on:menuEvent="showMenuOptionSelected"/>
-    <medicos-for v-if="menu.Medicos2" v-on:menuEvent="showMenuOptionSelected"/>
+    <main-menu/>
   </div>
 
 </div>
@@ -18,47 +14,13 @@
 
 <script>
 import headerTop from "@/components/header-top";
-import lista_medicos from "@/components/lista_medicos";
 import mainMenu from "@/components/main-menu";
-import lista_pacientes from "@/components/lista_pacientes";
-import pacientesFor from "@/components/pacientes-for";
-import medicosFor from "@/components/medicos-for";
-
-
-
-
 
 export default {
   name: 'App',
   components: {
     headerTop,
     mainMenu,
-    lista_medicos,
-    lista_pacientes,
-    pacientesFor,
-    medicosFor,
-
-  },
-
-  data(){
-    return{
-      menu:{
-        activeOption: "mainMenu",
-        mainMenu: true,
-        Medicos: false,
-        Medicos2: false,
-        Pacientes: false,
-        Pacientes2: false
-      }
-    }
-  },
-  methods: {
-    showMenuOptionSelected(option) {
-      let oldOption = this.menu.activeOption;
-      this.menu.activeOption = option;
-      this.menu[oldOption] = false;
-      this.menu[this.menu.activeOption] = true;
-    }
   },
 }
 </script>

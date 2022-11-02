@@ -1,7 +1,14 @@
 <template>
+
+  <header-top/>
+
   <div class="boton-form">
-    <span class="button-volver" v-on:click="$emit('menuEvent', 'mainMenu')">Volver atrás </span>
-    <span class="button-agregar" v-on:click="$emit('menuEvent', 'Medicos2')">Agregar Médico </span>
+    <router-link class="button-volver" :to="{name:'HomePage'}">
+      <span class="button-volver">Volver atrás </span>
+    </router-link>
+    <router-link class="button-agregar" :to="{name:'formularioMedicos'}">
+      <span class="button-agregar">Agregar Médico </span>
+    </router-link>
   </div>
 
 
@@ -25,19 +32,11 @@
 </template>
 
 <script>
+import headerTop from "@/components/header-top";
 
 export default {
   name: "lista_medicos",
-  components: {},
-  emits: ['menuEvent'],
-  methods: {
-    showMenuOptionSelected(option) {
-      let oldOption = this.menu.activeOption;
-      this.menu.activeOption = option;
-      this.menu[oldOption] = false;
-      this.menu[this.menu.activeOption] = true;
-    }
-  },
+  components: {headerTop},
   }
 
 </script>
@@ -65,16 +64,15 @@ span{
 
 span:hover{
   background-color: grey;
-  font-size: larger;
   border: 3px solid black;
 
 }
 
 .button-agregar{
-  margin-left: 29.5%;
+  margin-left: 275px;
 }
 
 .button-volver{
-  margin-left: 10%;
+  margin-left: 100px;
 }
 </style>

@@ -2,7 +2,9 @@
   <div class="cuerpo">
 
     <div class="sector_medicos">
-      <span class="button-medics" v-on:click="$emit('menuEvent', 'Medicos')">Nuestros Médicos</span>
+      <router-link :to="{name:'listaMedicos'}">
+        <span class="button-medics">Nuestros Médicos</span>
+      </router-link>
     </div>
 
     <div class="about-us">
@@ -12,7 +14,9 @@
     </div>
 
     <div class="sector_pacientes">
-      <span class="button-pacients" v-on:click="$emit('menuEvent', 'Pacientes')">Nuestros Pacientes</span>
+      <router-link :to="{name:'listaPacientes'}">
+        <span class="button-pacients">Nuestros Pacientes</span>
+      </router-link>
     </div>
 
   </div>
@@ -33,15 +37,6 @@ export default {
     bottomWords,
     comoFunciona,
 
-  },
-  emits: ['menuEvent'],
-  methods: {
-    showMenuOptionSelected(option) {
-      let oldOption = this.menu.activeOption;
-      this.menu.activeOption = option;
-      this.menu[oldOption] = false;
-      this.menu[this.menu.activeOption] = true;
-    }
   },
 }
 

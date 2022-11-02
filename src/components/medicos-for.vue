@@ -2,7 +2,9 @@
   <header-top/>
 
   <div class="boton-form-exit">
-   <span class="button-volver" v-on:click="$emit('menuEvent', 'Medicos')">Volver atrás </span>
+    <router-link :to="{name:'listaMedicos'}">
+      <span class="button-volver">Volver atrás </span>
+    </router-link>
   </div>
 
   <form action="mailto:peinchaust@ucema.edu.ar" method="post" enctype="text/plain">
@@ -64,21 +66,19 @@
 </template>
 
 <script>
-import HeaderTop from "@/App";
+import headerTop from "@/components/header-top";
 
 
 export default {
   name: 'pacientes-for',
   components: {
-    HeaderTop,
+    headerTop,
   },
-  emits: ['menuEvent'],
 }
 </script>
 
 <style scoped>
 .boton-form-exit{
-
   width: 100%;
   margin-bottom: 20px;
   display: flex;
@@ -100,9 +100,9 @@ span{
 
 span:hover{
   background-color: grey;
-  font-size: larger;
   border: 3px solid black;
 }
+
 input[type=submit]{
   font-size: medium;
   text-align: center;
@@ -123,12 +123,10 @@ input[type=reset]{
 }
 input[type=reset]:hover{
   background-color: grey;
-  font-size: larger;
   border: 3px solid black;
 }
 input[type=submit]:hover{
   background-color: grey;
-  font-size: larger;
   border: 3px solid black;
 }
 
