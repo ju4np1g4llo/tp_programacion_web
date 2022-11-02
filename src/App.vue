@@ -22,7 +22,6 @@ export default {
 <style>
 #main{
   overflow-x: hidden;
-
 }
 
 </style>

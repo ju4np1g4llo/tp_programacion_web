@@ -7,7 +7,7 @@
 
     </div>
 
-    <img src="../assets/logo.jpg" alt="logoweb" style="height: 220px;position: absolute; padding-left: 1.5%;">
+    <img src="../assets/logo.jpg" alt="logoweb" style="height: 220px;position: absolute; padding-left: 0.5% ;">
 
     <div class="date">
       <p>Desarrollado en 2022</p>
@@ -30,7 +30,6 @@ export default {
   padding-top: 1%;
   padding-bottom: 1%;
   font-size: larger;
-  margin-left: -10px;
   width: 100%;
   display: flex;
   flex-direction: row;

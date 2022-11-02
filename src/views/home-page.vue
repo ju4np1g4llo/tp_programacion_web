@@ -64,10 +64,15 @@ export default {
 </script>
 
 <style>
-#app {
-  width: 102%;
-  margin: -1%;
+#app{
+  width: 100%;
+  /*margin: -1%;*/
   background-image: url("../assets/fondo-final.jpg");
   background-size: 200%;
+  overflow-x: hidden;
 }
+
+
+
+
 </style>
