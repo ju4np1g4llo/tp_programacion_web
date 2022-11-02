@@ -6,8 +6,9 @@
       <p style="text-align: center">¡Informacion bien guardada! </p>
 
     </div>
-
-    <img src="../assets/logo.jpg" alt="logoweb" style="height: 220px;position: absolute; padding-left: 0.5% ;">
+    <router-link :to="{name:'HomePage'}">
+      <img src="../assets/logo.jpg" alt="logoweb" style="height: 220px;position: absolute; padding-left: 0.5% ;">
+    </router-link>
 
     <div class="date">
       <p>Desarrollado en 2022</p>
@@ -48,6 +49,10 @@ export default {
   font-family: georgia;
   /*display: flex;
   flex-direction: column;*/
+}
+
+img{
+  margin-left: -90px;
 }
 
 
