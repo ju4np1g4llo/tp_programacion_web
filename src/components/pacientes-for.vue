@@ -10,7 +10,7 @@
 
   <form action="mailto:peinchaust@ucema.edu.ar" method="post" enctype="text/plain">
     <fieldset>
-      <legend>IDENTIFICACION PERSONAL</legend>
+      <legend>IDENTIFICACIÓN PERSONAL</legend>
         <table>
           <tbody>
             <tr>
@@ -25,7 +25,7 @@
               &nbsp;
               <td>
             <input type="number" name="edad" id=""
-                   step="1">
+                   step="1" placeholder="Ingrese la edad">
             </td>
             </tr>
             <tr>
@@ -40,14 +40,14 @@
               <td>Altura</td>
               &nbsp;
               <td>
-                <input type="number" name="altura" id="">&nbsp;m
+                <input type="number" name="altura" id="" placeholder="Ingrese la altura en metros">&nbsp;m
               </td>
             </tr>
             <tr>
               <td>Peso</td>
               &nbsp;
               <td>
-                <input type="number" name="peso" id=""> &nbsp;Kg
+                <input type="number" name="peso" id="" placeholder="Ingrese el peso en Kgs"> &nbsp;Kg
               </td>
 
             </tr>
@@ -57,17 +57,17 @@
               <td>
                 <input type="radio" name="obra social" id="" value="SI">SI
                 <input type="radio" name="obra social" id="" value="NO">NO
-                <input type="text" name="obra social" id="" placeholder="Ingrese la obra social">
+                <input type="text" name="obra social" id="" placeholder="Nombre de la obra social">
                 &nbsp;
-                <input type="numbre" name="obra social" id="" placeholder="Ingrese el numero de obra social">
+                <input type="number" name="obra social" id="" placeholder="Número de obra social">
               </td>
 
             </tr>
             <tr>
-              <td>Direccion</td>
+              <td>Domicilio</td>
               &nbsp;
               <td>
-                <input type="text" name="direccion" id="">
+                <input type="text" name="direccion" id="" placeholder="Ingrese el domicilio del paciente">
               </td>
             </tr>
             <tr>
@@ -75,14 +75,14 @@
               &nbsp;
               <td>
                 <input type="text" name="" id=""
-            maxlength="10" value="+54">
+            maxlength="10" value="+54" placeholder="Celular o Teléfono">
               </td>
             </tr>
             <tr>
               <td>Email</td>
               &nbsp;
               <td>
-                <input type="email" name="mail" id="" value="@">
+                <input type="email" name="mail" id="" value="@" placeholder="Correo Electrónico">
               </td>
             </tr>
           </tbody>
@@ -94,7 +94,7 @@
 
   <br><br>
   <fieldset>
-    <legend>ANTECEDENTES MEDICOS</legend>
+    <legend>HISTORIA CLÍNICA</legend>
     <table>
       <tbody>
       <tr>
@@ -142,9 +142,9 @@
       </tr>
       <br>
       <tr>
-        <td>Antecedentes de enfermedades e intervenciones quirurgicas anteriores de importancia</td>
+        <td>Antecedentes de enfermedades e intervenciones quirúrgicas anteriores</td>
         <td>
-          <textarea name="" id="" cols="50" rows="5" maxlength="500"></textarea>
+          <textarea name="" id="" cols="50" rows="5" maxlength="500" placeholder="Ingrese la información adecuada... (MÁXIMO 500 CARACTERES)"></textarea>
         </td>
       </tr>
       <br>
@@ -166,7 +166,7 @@
       <td>
         <textarea
             name="" id="" cols="50" rows="5"
-            maxlength="500"></textarea>
+            maxlength="500" placeholder="Notas extra para tener en cuenta... (MÁXIMO 500 CARACTERES)"></textarea>
       </td>
       </tbody>
     </table>

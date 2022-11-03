@@ -10,7 +10,7 @@
 
   <form action="mailto:peinchaust@ucema.edu.ar" method="post" enctype="text/plain">
     <fieldset>
-      <legend>IDENTIFICACION MEDICOS</legend>
+      <legend>IDENTIFICACIÓN MEDICOS</legend>
       <table>
         <tbody>
         <tr>
@@ -23,7 +23,7 @@
           <td>Edad</td>
           <td>
             <input type="number" name="edad" id=""
-                   step="1">
+                   step="1" placeholder="Edad del médico">
           </td>
         </tr>
         <tr>
@@ -36,22 +36,22 @@
         <tr>
           <td>Estudios universitarios</td>
           <td>
-            <input type="text" name="altura" id="">
+            <input type="text" name="altura" id="" placeholder="Ingresar el nivel de estudios complteados">
           </td>
         </tr>
         <tr>
           <td>Consultorio donde atiende</td>
-          <input type="text" name="direccion" id="">
+          <input type="text" name="direccion" id="" placeholder="Ingrese la dirección del lugar">
         </tr>
         <tr>
           <td>Teléfono</td>
           <td>
             <input type="text" name="" id=""
-                   maxlength="10" value="+54">
+                   maxlength="10" value="+54" placeholder="Celular o Teléfono">
           </td>
         </tr>
         <tr>
-          <td>Email</td><input type="email" name="mail" id="" value="@">
+          <td>Email</td><input type="email" name="mail" id="" value="@" placeholder="Ingrese dirección de correo electrónico">
         </tr>
         </tbody>
       </table>

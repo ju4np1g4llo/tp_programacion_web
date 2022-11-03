@@ -10,7 +10,7 @@
     <div class="about-us">
       <h1> Sobre nosotros </h1>
       "Easy Files" es una página web la cual permite ordenar todo tipo de información necesaria para un trabajador del área médica. <br> <br>
-      Además, se puede almacenar la información de otros compañeros de profesión, para facilitar el intercambio de información.
+      Además, se puede almacenar la información de otros compañeros de profesión para facilitar el intercambio de información.
     </div>
 
     <div class="sector_pacientes">
