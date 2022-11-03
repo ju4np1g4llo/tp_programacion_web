@@ -1,4 +1,5 @@
 <template>
+
   <header-top/>
 
   <div class="boton-form-exit">
@@ -58,9 +59,12 @@
 
   <br>
   <br>
-  <input type="submit" value="Enviar">
-    &nbsp;
-  <input type="reset" value="Borrar Formulario" class="btn btn-green">
+
+    <div class="enviar-borrar">      &nbsp;
+      <input type="submit" value="Enviar">
+
+      <input type="reset" value="Borrar Formulario">
+    </div>
 
   </form>
 </template>
@@ -103,7 +107,7 @@ span:hover{
   border: 3px solid black;
 }
 
-input[type=submit]{
+input[type=reset] {
   font-size: medium;
   text-align: center;
   padding: 10px 25px;
@@ -111,8 +115,10 @@ input[type=submit]{
   background-color: white;
   display: block;
   border: 2px solid black;
+  margin-left: 375px;
 }
-input[type=reset]{
+
+input[type=submit] {
   font-size: medium;
   text-align: center;
   padding: 10px 25px;
@@ -130,5 +136,19 @@ input[type=submit]:hover{
   border: 3px solid black;
 }
 
+fieldset{
+  background-color: white;
+}
+.enviar-borrar{
+  display: flex;
+  flex-direction: row;
+  /*margin-left:10%;*/
+  margin-bottom: 3%;
+  justify-content: space-evenly;
+}
+form{
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
 </style>

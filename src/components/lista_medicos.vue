@@ -49,6 +49,7 @@ export default {
   display: flex;
   flex-direction: row;
   padding-top: 3%;
+  justify-content: space-evenly;
 }
 
 span{
@@ -69,10 +70,10 @@ span:hover{
 }
 
 .button-agregar{
-  margin-left: 275px;
+ /* margin-left: 275px;*/
 }
 
 .button-volver{
-  margin-left: 100px;
+  /*margin-left: 100px;*/
 }
 </style>

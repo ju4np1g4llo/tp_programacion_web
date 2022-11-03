@@ -48,12 +48,12 @@ export default {
   margin-top: 30px;
   margin-bottom: 20px;
   display: flex;
-   justify-content: space-evenly;
+  justify-content: space-evenly;
   flex-direction: row;
 }
 
 .sector_medicos{
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px;
   width: 300px;
   height: 300px;
   padding: 10px;
@@ -61,7 +61,6 @@ export default {
   margin-top: 20px;
   margin-bottom: 20px;
   background: rgb(255, 255, 255);
-  font-family: georgia;
   text-align: justify;
   background-image: url("https://img.freepik.com/free-photo/doctor-nurses-special-equipment_23-2148980721.jpg?w=2000");
   background-size: 125% 100% ;
@@ -69,6 +68,7 @@ export default {
   background-position: -40px;
   animation: imagenes-medicos 5s infinite;
   animation-direction: alternate;
+  font-family: Georgia;
 }
 
 @keyframes imagenes-medicos{

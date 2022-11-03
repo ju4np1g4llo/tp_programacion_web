@@ -4,16 +4,18 @@
     <div class="easy">
       <h1 style="text-align:center">Easy Files</h1>
       <p style="text-align: center">¡Informacion bien guardada! </p>
-
     </div>
+
     <router-link :to="{name:'HomePage'}">
-      <img src="../assets/logo.jpg" alt="logoweb" style="height: 220px;position: absolute; padding-left: 0.5% ;">
+      <img src="../assets/logo.jpg" alt="logoweb" style="height: 220px;">
     </router-link>
 
     <div class="date">
       <p>Desarrollado en 2022</p>
     </div>
+
   </div>
+
 </template>
 
 <script>
@@ -29,14 +31,13 @@ export default {
   color: white;
   background-size: 100% ;
   padding-top: 1%;
-  padding-bottom: 1%;
   font-size: larger;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  box-shadow: grey;
+  justify-content: space-evenly;
   border-bottom: 3px solid #0a0a0a;
+  font-size: larger;
 
 }
 .easy{
@@ -46,13 +47,10 @@ export default {
 
 }
 .date{
-  font-family: georgia;
-  /*display: flex;
-  flex-direction: column;*/
 }
 
 img{
-  margin-left: -90px;
+  /*margin-left: -90px;*/
 }
 
 

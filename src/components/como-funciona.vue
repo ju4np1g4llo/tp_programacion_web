@@ -7,15 +7,15 @@
 
     <div class="explicacion1">
       <h2>I. Visualización de la base de datos. </h2>
-      <h3>Si quiere ver la lista de personal médico, tocar el botón "Nuestros Médicos"<br> <br> <br> Si quiere ver la lista de pacientes, tocar el botón "Nuestros Pacientes"</h3><br>
+      <p>Si quiere ver la lista de personal médico, tocar el botón "Nuestros Médicos"<br> <br> <br> Si quiere ver la lista de pacientes, tocar el botón "Nuestros Pacientes"</p><br>
     </div>
     <div class="explicacion1">
       <h2>II. Agregar personas a la base de datos. </h2>
-      <h3>En la parte superior, aparecerá un botón para agregar una persona a la lista elegida <br> <br> <br> Al tocarlo, deberá rellenar un formulario, ingresando la información adecuada en cada campo</h3><br>
+      <p>En la parte superior, aparecerá un botón para agregar una persona a la lista elegida <br> <br> <br> Al tocarlo, deberá rellenar un formulario, ingresando la información adecuada en cada campo</p><br>
     </div>
     <div class="explicacion1">
       <h2>III. Visualización detallada individual. </h2>
-      <h3>Las listas generales no muestran toda la información en detalle, sino que muestran lo más importante <br> <br> <br> Al tocar en el nombre de una persona, se podrá visualizar con exactitud todo lo que usted ha ingresado en la base de datos</h3><br>
+      <p>Las listas generales no muestran toda la información en detalle, sino que muestran lo más importante <br> <br> <br> Al tocar en el nombre de una persona, se podrá visualizar con exactitud todo lo que usted ha ingresado en la base de datos</p><br>
     </div>
   </div>
 </template>

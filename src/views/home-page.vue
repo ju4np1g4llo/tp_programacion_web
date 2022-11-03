@@ -9,7 +9,6 @@
 
 </div>
 
-
 </template>
 
 <script>
@@ -28,13 +27,7 @@ export default {
 <style>
 #app{
   width: 100%;
-  /*margin: -1%;*/
   background-image: url("../assets/fondo-final.jpg");
   background-size: 200%;
-  overflow-x: hidden;
 }
-
-
-
-
 </style>

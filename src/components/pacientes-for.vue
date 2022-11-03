@@ -177,9 +177,9 @@
 
   <br>
 <div class="enviar-borrar">
-  <input type="reset" value="Borrar Formulario">
-  &nbsp;
   <input type="submit" value="Enviar">
+
+  <input type="reset" value="Borrar Formulario">
 </div>
 
   </form>
@@ -202,7 +202,7 @@ export default {
   width: 100%;
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: row;
   padding-top: 3%;
 }
@@ -231,7 +231,7 @@ span:hover{
   align-items: first;
 }
 
-input[type=submit] {
+input[type=reset] {
   font-size: medium;
   text-align: center;
   padding: 10px 25px;
@@ -241,7 +241,7 @@ input[type=submit] {
   border: 2px solid black;
   margin-left: 375px;
 }
-input[type=reset] {
+input[type=submit] {
   font-size: medium;
   text-align: center;
   padding: 10px 25px;
