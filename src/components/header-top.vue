@@ -37,13 +37,12 @@ export default {
   flex-direction: row;
   justify-content: space-evenly;
   border-bottom: 3px solid #0a0a0a;
-  font-size: larger;
 
 }
 .easy{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size:x-large;
-  margin-left: -8%;
+  margin-left: -5%;
 
 }
 .date{
