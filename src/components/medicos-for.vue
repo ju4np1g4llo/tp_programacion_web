@@ -82,6 +82,9 @@ export default {
 </script>
 
 <style scoped>
+template{
+  overflow-y: hidden;
+}
 .boton-form-exit{
   width: 100%;
   margin-bottom: 20px;
@@ -115,7 +118,7 @@ input[type=reset] {
   background-color: white;
   display: block;
   border: 2px solid black;
-  margin-left: 375px;
+  margin-left: 300px;
 }
 
 input[type=submit] {
@@ -142,8 +145,8 @@ fieldset{
 .enviar-borrar{
   display: flex;
   flex-direction: row;
-  /*margin-left:10%;*/
-  margin-bottom: 3%;
+  margin-left:-35%;
+  margin-bottom: 18%;
   justify-content: space-evenly;
 }
 form{
