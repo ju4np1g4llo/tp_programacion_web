@@ -34,7 +34,7 @@ import axios from "axios";
 
 
 function getPurchaseOrders() {
-    axios.get('http://127.0.0.1:5000/api/v1/purchase-orders/')
+    axios.get('http://127.0.0.1:5000/api/v1/lista-pacientes/')
         .then(function (response) {
             for (let i=0 ; i<response.data.length ; i++) {
                 addTableDataRow(response.data[i]);
