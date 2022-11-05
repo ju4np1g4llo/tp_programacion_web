@@ -76,6 +76,50 @@ function addEditButton(row, orderId) {
     cell.appendChild(button);
 }
 
+function getMedicos() {
+    axios.get('http://127.0.0.1:5000/api/v1/lista-medicos/')
+        .then(function (response) {
+            for (let i=0 ; i<response.data.length ; i++) {
+                addTableDataRowMeds(response.data[i]);
+            }
+            document.getElementById("tabla_medicos").hidden = false;
+        })
+}
+
+function addTableDataRowMeds(medico) {
+    let purOrdTableBody = document.getElementById('tabla_medicos').getElementsByTagName('tbody')[0];
+    let row = purOrdTableBody.insertRow(-1);
+
+    let cell0 = row.insertCell(0);
+    cell0.innerHTML = medico.nombre;
+
+    let cell1 = row.insertCell(1);
+    cell1.innerHTML = medico.apellido;
+
+    let cell2 = row.insertCell(2);
+    cell2.innerHTML = medico.ubicacion;
+
+    let cell3 = row.insertCell(3);
+    cell3.innerHTML = medico.telefono;
+
+    let cell4 = row.insertCell(4);
+    cell4.innerHTML = medico.correo;
+
+    addEditButtonMeds(row, medico.nombre);
+}
+
+function addEditButtonMeds(row, orderId) {
+    let cell = row.insertCell(-1);
+    let button = document.createElement("input");
+    button.id = orderId;
+    button.className = "button button-action";
+    button.type = "submit";
+    button.value = "Editar";
+    button.setAttribute("onclick", "editMedico(this.id)")
+    cell.appendChild(button);
+}
+
 getPacientes()
+getMedicos()
 
 

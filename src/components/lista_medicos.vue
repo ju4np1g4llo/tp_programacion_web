@@ -12,22 +12,22 @@
   </div>
 
 
-
-  <div>
-    <table id="tabla_pacientes">
+<div id="div-table">
+  <div id="lista">
+    <table id="tabla_medicos" hidden>
       <thead>
       <tr>
-        <th>Fecha</th>
         <th>Nombre</th>
-        <th>Numero de Paciente</th>
-        <th>Tipo de Consulta</th>
-        <th>Numeros de Obras Social</th>
+        <th>Apellido</th>
+        <th>Ubicación</th>
+        <th>Teléfono</th>
+        <th>Correo Electrónico</th>
       </tr>
       </thead>
-      <tbody>
-      </tbody>
+      <tbody></tbody>
     </table>
   </div>
+</div>
 
 </template>
 
@@ -69,11 +69,24 @@ span:hover{
 
 }
 
-.button-agregar{
- /* margin-left: 275px;*/
+table, th, td{
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+  background-color: white;
+}
+tbody{
+}
+#div-table {
+  margin: 10px;
+  text-align: center;
 }
 
-.button-volver{
-  /*margin-left: 100px;*/
+
+
+#lista{
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
 }
 </style>

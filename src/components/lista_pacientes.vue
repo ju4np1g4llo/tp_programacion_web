@@ -13,7 +13,7 @@
   </div>
 
   <div id="lista">
-    <table id="tabla_pacientes">
+    <table id="tabla_pacientes" hidden>
       <thead>
         <tr>
           <th>Fecha</th>
