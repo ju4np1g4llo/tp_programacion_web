@@ -12,15 +12,16 @@
 
   </div>
 
-  <div>
+  <div id="lista">
     <table id="tabla_pacientes">
       <thead>
         <tr>
           <th>Fecha</th>
           <th>Nombre</th>
-          <th>Numero de Paciente</th>
+          <th>Número de Obra Social</th>
           <th>Tipo de Consulta</th>
-          <th>Numero de Obras Social</th>
+          <th>Edad</th>
+          <th>Editar/Borrar</th>
         </tr>
       </thead>
       <tbody>
@@ -32,6 +33,7 @@
 
 <script>
 import headerTop from "@/components/header-top";
+
 export default {
   name: "lista_pacientes",
   components: {headerTop},
@@ -68,6 +70,24 @@ span:hover{
   background-color: grey;
   border: 3px solid black;
 
+}
+
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+  background-color: white;
+
+
+}
+th {
+  background-color: white;
+}
+
+#lista{
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
 }
 
 </style>
