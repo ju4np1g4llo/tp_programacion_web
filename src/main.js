@@ -33,7 +33,7 @@ app.mount('#app');
 import axios from "axios";
 
 
-function getPurchaseOrders() {
+function getPacientes() {
     axios.get('http://127.0.0.1:5000/api/v1/lista-pacientes/')
         .then(function (response) {
             for (let i=0 ; i<response.data.length ; i++) {
@@ -43,26 +43,26 @@ function getPurchaseOrders() {
         })
 }
 
-function addTableDataRow(purchaseOrder) {
+function addTableDataRow(paciente) {
     let purOrdTableBody = document.getElementById('tabla_pacientes').getElementsByTagName('tbody')[0];
     let row = purOrdTableBody.insertRow(-1);
 
     let cell0 = row.insertCell(0);
-    cell0.innerHTML = purchaseOrder.fecha;
+    cell0.innerHTML = paciente.fecha;
 
     let cell1 = row.insertCell(1);
-    cell1.innerHTML = purchaseOrder.nombre;
+    cell1.innerHTML = paciente.nombre;
 
     let cell2 = row.insertCell(2);
-    cell2.innerHTML = purchaseOrder.numero_obra;
+    cell2.innerHTML = paciente.numero_obra;
 
     let cell3 = row.insertCell(3);
-    cell3.innerHTML = purchaseOrder.tipo_consulta;
+    cell3.innerHTML = paciente.tipo_consulta;
 
     let cell4 = row.insertCell(4);
-    cell4.innerHTML = purchaseOrder.edad;
+    cell4.innerHTML = paciente.edad;
 
-    addEditButton(row, purchaseOrder.nombre);
+    addEditButton(row, paciente.nombre);
 }
 
 function addEditButton(row, orderId) {
@@ -72,10 +72,10 @@ function addEditButton(row, orderId) {
     button.className = "button button-action";
     button.type = "submit";
     button.value = "Editar";
-    button.setAttribute("onclick", "editPurchaseOrder(this.id)")
+    button.setAttribute("onclick", "editPaciente(this.id)")
     cell.appendChild(button);
 }
 
-getPurchaseOrders()
+getPacientes()
 
 
