@@ -17,17 +17,19 @@
     <table id="tabla_medicos" hidden>
       <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Ubicación</th>
-        <th>Teléfono</th>
-        <th>Correo Electrónico</th>
+        <th>Nombre del Médico</th>
+        <th>Apellido del Médico</th>
+        <th>Dirección de consultorio/hospital</th>
+        <th>Teléfono/Celular</th>
+        <th>Correo Electrónico del Médico</th>
       </tr>
       </thead>
       <tbody></tbody>
     </table>
   </div>
 </div>
+
+
 
 </template>
 
@@ -66,27 +68,27 @@ span{
 span:hover{
   background-color: grey;
   border: 3px solid black;
-
 }
 
 table, th, td{
-  border: 2px solid black;
+  border: 1px solid black;
   border-collapse: collapse;
   padding: 5px;
   background-color: white;
 }
-tbody{
-}
-#div-table {
-  margin: 10px;
-  text-align: center;
-}
 
-
+table{
+  display: table;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+}
 
 #lista{
   display: flex;
   justify-content: center;
   margin-top: 3%;
+  text-align: center;
 }
 </style>

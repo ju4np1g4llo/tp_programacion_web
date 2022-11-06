@@ -14,11 +14,19 @@
         <table>
           <tbody>
             <tr>
-              <td>Fecha de nacimiento</td>
+              <td>Fecha de la consulta</td>
               &nbsp;
               <td>
                 <input type=date name="fecha de nacimiento" id="">
               </td>
+            </tr>
+            <tr>
+            <td>Nombre Completo</td>
+            &nbsp;
+            <td>
+              <input type="text" name="nombre" id=""
+                      placeholder="Ingrese el nombre completo">
+            </td>
             </tr>
             <tr>
               <td>Edad</td>
@@ -272,5 +280,8 @@ form{
 }
 fieldset{
   background-color: white;
+}
+legend{
+  border: 1px solid black; background-color: white;
 }
 </style>

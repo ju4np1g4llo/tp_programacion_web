@@ -16,8 +16,8 @@
     <table id="tabla_pacientes" hidden>
       <thead>
         <tr>
-          <th>Fecha</th>
-          <th>Nombre</th>
+          <th>Fecha de consulta</th>
+          <th>Nombre del Paciente</th>
           <th>Número de Obra Social</th>
           <th>Tipo de Consulta</th>
           <th>Edad</th>
@@ -43,16 +43,12 @@ export default {
 
 <style scoped>
 .boton-form{
-
   width: 100%;
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   padding-top: 3%;
   justify-content: space-evenly;
-}
-
-.button-volver{
 }
 
 span{
@@ -69,25 +65,27 @@ span{
 span:hover{
   background-color: grey;
   border: 3px solid black;
-
 }
 
 table, th, td {
-  border: 2px solid black;
-  border-collapse: collapse;
+  border: 1px solid black;
   padding: 5px;
   background-color: white;
-
-
+  border-collapse: collapse;
 }
-th {
-  background-color: white;
+
+table{
+  display: table;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
 }
 
 #lista{
   display: flex;
   justify-content: center;
   margin-top: 3%;
+  text-align: center;
 }
-
 </style>
