@@ -32,20 +32,20 @@ app.mount('#app');
 
 import axios from "axios";
 
-
 function getPacientes() {
     axios.get('http://127.0.0.1:5000/api/v1/lista-pacientes/')
         .then(function (response) {
-            for (let i=0 ; i<response.data.length ; i++) {
+            for (let i = 0; i < response.data.length; i++) {
                 addTableDataRow(response.data[i]);
             }
+            document.getElementById("div-table").hidden = true;
             document.getElementById("tabla_pacientes").hidden = false;
-        })
+            });
 }
 
 function addTableDataRow(paciente) {
-    let purOrdTableBody = document.getElementById('tabla_pacientes').getElementsByTagName('tbody')[0];
-    let row = purOrdTableBody.insertRow(-1);
+    let pacientesList = document.getElementById('tabla_pacientes').getElementsByTagName('tbody')[0];
+    let row = pacientesList.insertRow(-1);
 
     let cell0 = row.insertCell(0);
     cell0.innerHTML = paciente.fecha;
@@ -62,17 +62,28 @@ function addTableDataRow(paciente) {
     let cell4 = row.insertCell(4);
     cell4.innerHTML = paciente.edad;
 
-    addEditButton(row, paciente.nombre);
+    addEditButton(row, paciente.numero_obra);
+    addDeleteButton(row,paciente.numero_obra)
 }
 
-function addEditButton(row, orderId) {
+function addEditButton(row, paciente_id) {
     let cell = row.insertCell(-1);
     let button = document.createElement("input");
-    button.id = orderId;
+    button.id = paciente_id;
     button.className = "button button-action";
     button.type = "submit";
     button.value = "Editar";
     button.setAttribute("onclick", "editPaciente(this.id)")
+    cell.appendChild(button);
+}
+function addDeleteButton(row, paciente_id) {
+    let cell = row.insertCell(-1);
+    let button = document.createElement("input");
+    button.id = paciente_id;
+    button.className = "button button-action";
+    button.type = "reset";
+    button.value = "Borrar";
+    button.setAttribute("onclick", "deletePaciente(this.id)")
     cell.appendChild(button);
 }
 
@@ -82,13 +93,13 @@ function getMedicos() {
             for (let i=0 ; i<response.data.length ; i++) {
                 addTableDataRowMeds(response.data[i]);
             }
-            document.getElementById("tabla_medicos").hidden = false;
+            document.getElementById("tabla_medicos")
         })
 }
 
 function addTableDataRowMeds(medico) {
-    let purOrdTableBody = document.getElementById('tabla_medicos').getElementsByTagName('tbody')[0];
-    let row = purOrdTableBody.insertRow(-1);
+    let medicList = document.getElementById('tabla_medicos').getElementsByTagName('tbody')[0];
+    let row = medicList.insertRow(-1);
 
     let cell0 = row.insertCell(0);
     cell0.innerHTML = medico.nombre;
@@ -105,13 +116,25 @@ function addTableDataRowMeds(medico) {
     let cell4 = row.insertCell(4);
     cell4.innerHTML = medico.correo;
 
-    addEditButtonMeds(row, medico.nombre);
+    addDeleteButtonMeds(row, medico.correo)
+    addEditButtonMeds(row, medico.correo);
+
 }
 
 function addEditButtonMeds(row, orderId) {
     let cell = row.insertCell(-1);
     let button = document.createElement("input");
     button.id = orderId;
+    button.className = "button button-action";
+    button.type = "reset";
+    button.value = "Borrar";
+    button.setAttribute("onclick", "deleteMedico(this.id)")
+    cell.appendChild(button);
+}
+function addDeleteButtonMeds(row, medico_id) {
+    let cell = row.insertCell(-1);
+    let button = document.createElement("input");
+    button.id = medico_id;
     button.className = "button button-action";
     button.type = "submit";
     button.value = "Editar";

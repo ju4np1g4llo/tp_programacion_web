@@ -22,6 +22,8 @@
         <th>Dirección de consultorio/hospital</th>
         <th>Teléfono/Celular</th>
         <th>Correo Electrónico del Médico</th>
+        <th>Editar</th>
+        <th>Borrar</th>
       </tr>
       </thead>
       <tbody></tbody>
@@ -75,6 +77,7 @@ table, th, td{
   border-collapse: collapse;
   padding: 5px;
   background-color: white;
+  margin-bottom: 20%;
 }
 
 table{

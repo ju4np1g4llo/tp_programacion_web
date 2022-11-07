@@ -21,7 +21,8 @@
           <th>Número de Obra Social</th>
           <th>Tipo de Consulta</th>
           <th>Edad</th>
-          <th>Editar/Borrar</th>
+          <th>Editar</th>
+          <th>Borrar</th>
         </tr>
       </thead>
       <tbody>
