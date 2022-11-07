@@ -77,7 +77,7 @@ table, th, td{
   border-collapse: collapse;
   padding: 5px;
   background-color: white;
-  margin-bottom: 20%;
+  margin-bottom: 30%;
 }
 
 table{

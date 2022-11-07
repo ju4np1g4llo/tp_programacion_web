@@ -73,6 +73,7 @@ table, th, td {
   padding: 5px;
   background-color: white;
   border-collapse: collapse;
+  margin-bottom: 30%;
 }
 
 table{
