@@ -11,7 +11,7 @@
     </router-link>
 
   </div>
-  <!-- <div class="lista">
+  <div class="lista">
     <table>
       <thead>
         <tr class="thead">
@@ -23,13 +23,15 @@
       <tbody>
         <tr class="trBody" v-for="paciente in pacientes" :key="paciente">
           <td>{{paciente.id}}</td>
-          <td><a href="">{{paciente.name}}</a></td>
+          <td><router-link class="button-volver" :to="'/paciente/'+ paciente.id">
+            {{paciente.name}}
+          </router-link></td>
           <td>{{paciente.email}}</td>
           <td class="buttons"><button class="button">Editar</button><button class="button">Borrar</button></td>
         </tr>
       </tbody>
     </table>
-  </div> -->
+  </div>
 </template>
 
 <script>
@@ -51,7 +53,8 @@ export default {
     getPacientes(){
       axios.get('https://jsonplaceholder.typicode.com/users')
       .then(response => {
-        this.pacientes = response.data
+        this.pacientes = response.data;
+        console.log(response.data);
       })
     }
   }

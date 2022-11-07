@@ -8,71 +8,72 @@
       </router-link>
     </div>
     <div class="lista">
-        <h2>Ficha medica</h2>
-      <table>
-        <thead>
-          <tr class="thead">
-            <th>Fecha</th>
-            <th>Nombre</th>
-            <th>Medico</th>
-            <th>Obra social</th>
-            <th>Numero de orden</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="trBody" v-for="(detalle, index) in detallePaciente" :key="index">
-            <td>{{detalle.order_date}}</td>
-            <td>{{detalle.order_id}}</td>
-            <td>{{detalle.state}}</td>
-            <td>{{detalle.supplier}}</td>
-            <td>{{detalle.cuit_supplier}}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="card">
+        <div class="h2">
+          <h2>Ficha médica</h2>
+        </div>
+        <div class="fichaMedica">
+          <div class="divLeft">
+            <div class="information">
+              <p>Nombre:</p>
+              <p>Edad:</p>
+              <p>Sexo:</p>
+              <p>Peso:</p>
+              <p>Obra social:</p>
+            </div>
+            <div class="data" v-for="(paciente) in detallePaciente" :key="paciente">
+              <p>{{paciente.name}}</p>
+              <p>{{paciente.phone}}</p>
+              <p>{{paciente.username}}</p>
+              <p>{{paciente.email}}</p>
+              <p>{{paciente.id}}</p>
+            </div>
+          </div>
+        <div class="divRight">
+          <div class="information">
+            <p>Nombre:</p>
+            <p>Edad:</p>
+            <p>Sexo:</p>
+            <p>Peso:</p>
+            <p>Obra social:</p>
+          </div>
+          <div class="data" v-for="(paciente) in detallePaciente" :key="paciente">
+            <p>{{paciente.name}}</p>
+            <p>{{paciente.phone}}</p>
+            <p>{{paciente.username}}</p>
+            <p>{{paciente.email}}</p>
+            <p>{{paciente.id}}</p>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
 </template>
 
 <script>
 import headerTop from "@/components/header-top";
-// import axios from "axios";
+import axios from "axios";
 
 export default {
     name: "detalle_pacientes",
     components: {headerTop},
-    mounted(){
-    this.getDetallePaciente()
+    data(){
+        return {
+          detallePaciente:[]
+        }},
+    created: function(){
+        this.getDetallePaciente();
     },
-    data() {
-    return {
-        detallePaciente: [{
-            "order_date": "12/12/2021",
-            "order_id": "000001",
-            "state": "Ordenado",
-            "supplier": "BEAN",
-            "cuit_supplier": "123123",
-            "items": [
-                {
-                    "item": "Beans 1kg",
-                    "quantity": "2"
-                },
-                {
-                    "item": "Azucar 1kg",
-                    "quantity": "6"
-                }
-            ],
-            "total": "322",
-            "deadline": "14/12/2021"
-    }]
+    methods: {
+      getDetallePaciente()
+            {
+              let url = 'https://jsonplaceholder.typicode.com/users/' + this.$route.params.id;
+                axios.get(url).then((data) => {
+                    this.detallePaciente = data;
+                    console.log(data);
+                });
+            }
     }
-    },
-    /* getDetallePaciente(){
-        axios.get('https://jsonplaceholder.typicode.com/users/1')
-        .then(response => {
-        this.detallePaciente = response.data;
-        console.log(response)
-        })
-    }} */
-    
 }
 </script>
 
@@ -85,7 +86,47 @@ export default {
     padding-top: 3%;
     justify-content: center;
 }
-
+.lista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 50px;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  gap: 30px;
+  padding: 40px;
+  border: 2px solid black;
+  width: 600px;
+}
+.fichaMedica{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px;
+}
+.divLeft, .divRight{
+  display: flex;
+  flex-direction: row;
+}
+.data, .information{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.information p {
+  font-weight: 600;
+  border-bottom: 1px solid black;
+}
+.data p {
+  text-align: end;
+  border-bottom: 1px solid black;
+}
 th, td{
     padding: 10px;
     color: black;
@@ -119,12 +160,5 @@ span{
 span:hover{
     background-color: grey;
     border: 3px solid black;
-}
-.lista{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    margin-top: 50px;
 }
 </style>

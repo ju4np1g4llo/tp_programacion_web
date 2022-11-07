@@ -16,7 +16,7 @@ const routes = [
     {path: '/lista_pacientes', name: "listaPacientes", component: lista_pacientes},
     {path: '/formulario_pacientes', name: "formularioPacientes", component: pacientesFor},
     {path: '/formulario_medicos', name: "formularioMedicos", component: medicosFor},
-    {path: '/detalle_pacientes', name: "detallePacientes", component: detalle_pacientes}
+    {path: '/paciente/:id', name: "detallePacientes", component: detalle_pacientes}
 ];
 
 const router = VueRouter.createRouter({
