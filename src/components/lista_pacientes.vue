@@ -11,7 +11,7 @@
     </router-link>
 
   </div>
-  <div class="lista">
+  <!-- <div class="lista">
     <table>
       <thead>
         <tr class="thead">
@@ -22,44 +22,44 @@
       </thead>
       <tbody>
         <tr class="trBody" v-for="paciente in pacientes" :key="paciente">
-          <td>{{paciente.fecha}}</td>
-          <td>{{paciente.nombre}}</td>
-          <td>{{paciente.medico}}</td>
-          <td><button class="button">Editar</button></td>
-          <td><button class="button">Borrar</button></td>
+          <td>{{paciente.id}}</td>
+          <td><a href="">{{paciente.name}}</a></td>
+          <td>{{paciente.email}}</td>
+          <td class="buttons"><button class="button">Editar</button><button class="button">Borrar</button></td>
         </tr>
       </tbody>
     </table>
-  </div>
-
+  </div> -->
 </template>
 
 <script>
 import headerTop from "@/components/header-top";
+import axios from "axios";
+
 export default {
   name: "lista_pacientes",
   components: {headerTop},
-  data: function() {
-return {
-    pacientes: [
-                {fecha:"12/12", nombre:"Federico Lopez", medico:"Oscar Rodriguez"},
-                {fecha:"12/12", nombre:"Federico Lopez", medico:"Oscar Rodriguez"},
-                {fecha:"12/12", nombre:"Federico Lopez", medico:"Oscar Rodriguez"},
-                {fecha:"12/12", nombre:"Federico Lopez", medico:"Oscar Rodriguez"},
-                {fecha:"12/12", nombre:"Federico Lopez", medico:"Oscar Rodriguez"},
-                {fecha:"12/12", nombre:"Federico Lopez", medico:"Oscar Rodriguez"},
-                {fecha:"12/12", nombre:"Federico Lopez", medico:"Oscar Rodriguez"},
-                {fecha:"12/12", nombre:"Federico Lopez", medico:"Oscar Rodriguez"},
-                {fecha:"12/12", nombre:"Federico Lopez", medico:"Oscar Rodriguez"}
-        ]
-  };
-}
+  mounted(){
+    this.getPacientes()
+  },
+  data() {
+    return {
+      pacientes: []
+    }
+  },
+  methods: {
+    getPacientes(){
+      axios.get('https://jsonplaceholder.typicode.com/users')
+      .then(response => {
+        this.pacientes = response.data
+      })
+    }
+  }
 }
 </script>
 
 <style scoped>
 .boton-form{
-
   width: 100%;
   margin-bottom: 20px;
   display: flex;
@@ -71,27 +71,15 @@ return {
   min-height: 100vh;
   margin-top: 50px;
 }
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 table{
   width: 50%;
   margin: auto;
   background-color: white;
-}
-.thead{
-  display: flex;
-  justify-content: left;
-  gap: 90px;
-  font-size: 20px;
-  border-bottom: 1px solid black;
-}
-tr{
-  display: flex;
-  justify-content: space-around;
-  margin: auto;
-  border-bottom: 1px solid black;
-  width: 100%;
-}
-.trBody:last-child{
-  border-bottom: transparent;
 }
 th, td{
   padding: 10px;
@@ -107,12 +95,33 @@ span{
 }
 .button{
   cursor: pointer;
+  padding: 8px;
 }
 
 span:hover{
   background-color: grey;
   border: 3px solid black;
-
 }
 
+table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+table{
+  display: table;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+#lista{
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  text-align: center;
+}
 </style>

@@ -14,16 +14,17 @@
       <table>
         <tbody>
         <tr>
-          <td>Fecha de nacimiento</td>
+          <td>Nombre</td>
           <td>
-            <input type=date name="fecha de nacimiento" id="">
+            <input type="text" name="nombre" id=""
+                   placeholder="Nombre del medico">
           </td>
         </tr>
         <tr>
-          <td>Edad</td>
+          <td>Apellido</td>
           <td>
-            <input type="number" name="edad" id=""
-                   step="1" placeholder="Edad del médico">
+            <input type="text" name="apellido" id=""
+                   placeholder="Apellido del medico">
           </td>
         </tr>
         <tr>
@@ -152,6 +153,9 @@ fieldset{
 form{
   margin-left: 10%;
   margin-right: 10%;
+}
+legend{
+  border: 1px solid black; background-color: white;
 }
 
 </style>
