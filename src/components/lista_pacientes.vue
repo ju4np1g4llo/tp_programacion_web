@@ -14,21 +14,17 @@
   <div class="lista">
     <table>
       <thead>
-        <tr class="thead">
-          <th>Fecha</th>
-          <th>Nombre</th>
-          <th>Medico</th>
+        <tr>
+          <th>Fecha de consulta</th>
+          <th>Nombre del Paciente</th>
+          <th>Número de Obra Social</th>
+          <th>Tipo de Consulta</th>
+          <th>Edad</th>
+          <th>Editar</th>
+          <th>Borrar</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="trBody" v-for="paciente in pacientes" :key="paciente">
-          <td>{{paciente.id}}</td>
-          <td><router-link class="button-volver" :to="'/paciente/'+ paciente.id">
-            {{paciente.name}}
-          </router-link></td>
-          <td>{{paciente.email}}</td>
-          <td class="buttons"><button class="button">Editar</button><button class="button">Borrar</button></td>
-        </tr>
       </tbody>
     </table>
   </div>
@@ -36,28 +32,10 @@
 
 <script>
 import headerTop from "@/components/header-top";
-import axios from "axios";
 
 export default {
   name: "lista_pacientes",
   components: {headerTop},
-  mounted(){
-    this.getPacientes()
-  },
-  data() {
-    return {
-      pacientes: []
-    }
-  },
-  methods: {
-    getPacientes(){
-      axios.get('https://jsonplaceholder.typicode.com/users')
-      .then(response => {
-        this.pacientes = response.data;
-        console.log(response.data);
-      })
-    }
-  }
 }
 </script>
 
@@ -70,23 +48,6 @@ export default {
   padding-top: 3%;
   justify-content: space-evenly;
 }
-.lista{
-  min-height: 100vh;
-  margin-top: 50px;
-}
-.buttons{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-table{
-  width: 50%;
-  margin: auto;
-  background-color: white;
-}
-th, td{
-  padding: 10px;
-}
 span{
   font-size: medium;
   text-align: center;
@@ -96,23 +57,17 @@ span{
   display: block;
   border: 2px solid black;
 }
-.button{
-  cursor: pointer;
-  padding: 8px;
-}
-
 span:hover{
   background-color: grey;
   border: 3px solid black;
 }
-
 table, th, td {
   border: 1px solid black;
   padding: 5px;
   background-color: white;
   border-collapse: collapse;
+  margin-bottom: 30%;
 }
-
 table{
   display: table;
   box-sizing: border-box;
@@ -120,7 +75,6 @@ table{
   border-spacing: 2px;
   border-color: grey;
 }
-
 #lista{
   display: flex;
   justify-content: center;

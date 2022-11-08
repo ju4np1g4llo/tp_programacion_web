@@ -18,8 +18,8 @@
               <p>Nombre:</p>
               <p>Edad:</p>
               <p>Sexo:</p>
+              <p>Altura:</p>
               <p>Peso:</p>
-              <p>Obra social:</p>
             </div>
             <div class="data" v-for="(paciente) in detallePaciente" :key="paciente">
               <p>{{paciente.name}}</p>
@@ -31,11 +31,11 @@
           </div>
         <div class="divRight">
           <div class="information">
-            <p>Nombre:</p>
-            <p>Edad:</p>
-            <p>Sexo:</p>
-            <p>Peso:</p>
-            <p>Obra social:</p>
+            <p>Obra Social:</p>
+            <p>Domicilio:</p>
+            <p>Teléfono:</p>
+            <p>Email:</p>
+            <p>Grupo sanguineo:</p>
           </div>
           <div class="data" v-for="(paciente) in detallePaciente" :key="paciente">
             <p>{{paciente.name}}</p>
@@ -102,7 +102,7 @@ export default {
   gap: 30px;
   padding: 40px;
   border: 2px solid black;
-  width: 600px;
+  width: 700px;
 }
 .fichaMedica{
   display: flex;
