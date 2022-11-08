@@ -29,63 +29,8 @@ app.use(router);
 app.mount('#app');
 
 
-
 import axios from "axios";
 
-function getPacientes() {
-    axios.get('http://127.0.0.1:5000/api/v1/lista-pacientes/')
-        .then(function (response) {
-            for (let i = 0; i < response.data.length; i++) {
-                addTableDataRow(response.data[i]);
-            }
-            document.getElementById("div-table").hidden = true;
-            document.getElementById("tabla_pacientes").hidden = false;
-            });
-}
-
-function addTableDataRow(paciente) {
-    let pacientesList = document.getElementById('tabla_pacientes').getElementsByTagName('tbody')[0];
-    let row = pacientesList.insertRow(-1);
-
-    let cell0 = row.insertCell(0);
-    cell0.innerHTML = paciente.fecha;
-
-    let cell1 = row.insertCell(1);
-    cell1.innerHTML = paciente.nombre;
-
-    let cell2 = row.insertCell(2);
-    cell2.innerHTML = paciente.numero_obra;
-
-    let cell3 = row.insertCell(3);
-    cell3.innerHTML = paciente.tipo_consulta;
-
-    let cell4 = row.insertCell(4);
-    cell4.innerHTML = paciente.edad;
-
-    addEditButton(row, paciente.numero_obra);
-    addDeleteButton(row,paciente.numero_obra)
-}
-
-function addEditButton(row, paciente_id) {
-    let cell = row.insertCell(-1);
-    let button = document.createElement("input");
-    button.id = paciente_id;
-    button.className = "button button-action";
-    button.type = "submit";
-    button.value = "Editar";
-    button.setAttribute("onclick", "editPaciente(this.id)")
-    cell.appendChild(button);
-}
-function addDeleteButton(row, paciente_id) {
-    let cell = row.insertCell(-1);
-    let button = document.createElement("input");
-    button.id = paciente_id;
-    button.className = "button button-action";
-    button.type = "reset";
-    button.value = "Borrar";
-    button.setAttribute("onclick", "deletePaciente(this.id)")
-    cell.appendChild(button);
-}
 
 function getMedicos() {
     axios.get('http://127.0.0.1:5000/api/v1/lista-medicos/')
@@ -142,48 +87,7 @@ function addDeleteButtonMeds(row, medico_id) {
     cell.appendChild(button);
 }
 
-getPacientes()
 getMedicos()
 
-function CreatePaciente() {
-    let consulta = document.getElementById("fecha-consulta").value;
-    let nombre = document.getElementById("nombre").value;
-    let edad = document.getElementById("edad").value;
-    let sexo = document.querySelector('input[name=sexo]').value
-    let altura = document.getElementById("altura").value;
-    let peso = document.getElementById("peso").value;
-    let ObraSocial = document.getElementById('obra-social').value;
-    let direccion = document.getElementById('direccion').value;
-    let telefono = document.getElementById('telefono').value;
-    let mail = document.getElementById('mail').value;
-    let grupoSanguineo = document.querySelector('input[name="sangre"]').value;
-    let alergias = document.getElementsByClassName('alergias');
-    let antecedentes = document.getElementById('antecedentes').value;
-    let EnfermedadCronica = document.getElementById('enfermedad-cronica').value;
-    let medicamento = document.querySelector('medicamento').value;
-    let observaciones = document.getElementById('observaciones').value;
-
-
-    axios.post('http://127.0.0.1:5000/api/v1/purchase-orders/',
-        {
-            "order_date": orderDate,
-            "state": state,
-            "supplier": supplier,
-            "cuit_supplier": cuitSupplier,
-            "items": items,
-            "total": total,
-            "deadline": deadline,
-        })
-        .then(function (response) {
-            let successMessage = document.getElementById("sucess-message");
-            document.getElementById("order-id").value = response.data["order_id"];
-            successMessage.innerHTML = `Orden de Compra [${response.data["order_id"]}] creada`;
-            successMessage.hidden = false;
-        })
-        .catch(function (error) {
-            alert("No se puedo guardar la Orden de Compra");
-            console.log(error);
-        });
-}
 
 
