@@ -145,4 +145,45 @@ function addDeleteButtonMeds(row, medico_id) {
 getPacientes()
 getMedicos()
 
+function CreatePaciente() {
+    let consulta = document.getElementById("fecha-consulta").value;
+    let nombre = document.getElementById("nombre").value;
+    let edad = document.getElementById("edad").value;
+    let sexo = document.querySelector('input[name=sexo]').value
+    let altura = document.getElementById("altura").value;
+    let peso = document.getElementById("peso").value;
+    let ObraSocial = document.getElementById('obra-social').value;
+    let direccion = document.getElementById('direccion').value;
+    let telefono = document.getElementById('telefono').value;
+    let mail = document.getElementById('mail').value;
+    let grupoSanguineo = document.querySelector('input[name="sangre"]').value;
+    let alergias = document.getElementsByClassName('alergias');
+    let antecedentes = document.getElementById('antecedentes').value;
+    let EnfermedadCronica = document.getElementById('enfermedad-cronica').value;
+    let medicamento = document.querySelector('medicamento').value;
+    let observaciones = document.getElementById('observaciones').value;
+
+
+    axios.post('http://127.0.0.1:5000/api/v1/purchase-orders/',
+        {
+            "order_date": orderDate,
+            "state": state,
+            "supplier": supplier,
+            "cuit_supplier": cuitSupplier,
+            "items": items,
+            "total": total,
+            "deadline": deadline,
+        })
+        .then(function (response) {
+            let successMessage = document.getElementById("sucess-message");
+            document.getElementById("order-id").value = response.data["order_id"];
+            successMessage.innerHTML = `Orden de Compra [${response.data["order_id"]}] creada`;
+            successMessage.hidden = false;
+        })
+        .catch(function (error) {
+            alert("No se puedo guardar la Orden de Compra");
+            console.log(error);
+        });
+}
+
 

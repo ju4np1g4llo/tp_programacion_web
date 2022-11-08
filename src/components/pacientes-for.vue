@@ -17,14 +17,14 @@
               <td>Fecha de la consulta</td>
               &nbsp;
               <td>
-                <input type=date name="fecha de nacimiento" id="">
+                <input type=date name="fecha de consulta" id="fecha-consulta">
               </td>
             </tr>
             <tr>
             <td>Nombre Completo</td>
             &nbsp;
             <td>
-              <input type="text" name="nombre" id=""
+              <input type="text" name="nombre" id="nombre"
                       placeholder="Ingrese el nombre completo">
             </td>
             </tr>
@@ -32,7 +32,7 @@
               <td>Edad</td>
               &nbsp;
               <td>
-            <input type="number" name="edad" id=""
+            <input type="number" name="edad" id="edad"
                    step="1" placeholder="Ingrese la edad">
             </td>
             </tr>
@@ -40,22 +40,22 @@
               <td>Sexo</td>
               &nbsp;
               <td>
-                <input type="radio" name="sexo" id="" value="M">Masc.
-                <input type="radio" name="sexo" id="" value="F">Fem.
+                <input type="radio" name="sexo" id="sexo" value="M">Masc.
+                <input type="radio" name="sexo" id="sexo" value="F">Fem.
             </td>
             </tr>
             <tr>
               <td>Altura</td>
               &nbsp;
               <td>
-                <input type="number" name="altura" id="" placeholder="Ingrese la altura en metros">&nbsp;m
+                <input type="number" name="altura" id="altura" placeholder="Ingrese la altura en metros">&nbsp;m
               </td>
             </tr>
             <tr>
               <td>Peso</td>
               &nbsp;
               <td>
-                <input type="number" name="peso" id="" placeholder="Ingrese el peso en Kgs"> &nbsp;Kg
+                <input type="number" name="peso" id="peso" placeholder="Ingrese el peso en Kgs"> &nbsp;Kg
               </td>
 
             </tr>
@@ -63,9 +63,9 @@
               <td>Obra social</td>
               &nbsp;
               <td>
-                <input type="radio" name="obra social" id="" value="SI">SI
-                <input type="radio" name="obra social" id="" value="NO">NO
-                <input type="text" name="obra social" id="" placeholder="Nombre de la obra social">
+                <input type="radio" name="obra social" id="obra-social" value="SI">SI
+                <input type="radio" name="obra social" id="obra-social" value="NO">NO
+                <input type="text" name="obra social" id="obra-social" placeholder="Nombre de la obra social">
                 &nbsp;
                 <input type="number" name="obra social" id="" placeholder="Número de obra social">
               </td>
@@ -75,14 +75,14 @@
               <td>Domicilio</td>
               &nbsp;
               <td>
-                <input type="text" name="direccion" id="" placeholder="Ingrese el domicilio del paciente">
+                <input type="text" name="direccion" id="direccion" placeholder="Ingrese el domicilio del paciente">
               </td>
             </tr>
             <tr>
               <td>Teléfono</td>
               &nbsp;
               <td>
-                <input type="text" name="" id=""
+                <input type="text" name="telefono" id="telefono"
             maxlength="10" value="+54" placeholder="Celular o Teléfono">
               </td>
             </tr>
@@ -90,7 +90,7 @@
               <td>Email</td>
               &nbsp;
               <td>
-                <input type="email" name="mail" id="" value="@" placeholder="Correo Electrónico">
+                <input type="email" name="mail" id="mail" value="@" placeholder="Correo Electrónico">
               </td>
             </tr>
           </tbody>
@@ -108,7 +108,7 @@
       <tr>
         <td>Grupo sanguineo</td>
         <td>
-          <select name="sangre" id="">
+          <select name="sangre" id="grupo-sanguineo">
             <option value="tipo de sangre:">A+</option>
             <option value="tipo de sangre:">A-</option>
             <option value="tipo de sangre:">B+</option>
@@ -152,28 +152,28 @@
       <tr>
         <td>Antecedentes de enfermedades e intervenciones quirúrgicas anteriores</td>
         <td>
-          <textarea name="" id="" cols="50" rows="5" maxlength="500" placeholder="Ingrese la información adecuada... (MÁXIMO 500 CARACTERES)"></textarea>
+          <textarea name="antecedentes" id="antecedentes" cols="50" rows="5" maxlength="500" placeholder="Ingrese la información adecuada... (MÁXIMO 500 CARACTERES)"></textarea>
         </td>
       </tr>
       <br>
       <tr>
         <td>Padece alguna enfermedad cronica?</td>
         <div>
-          <input type="radio" name="cronica" id="" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
+          <input type="radio" name="enfermedad-cronica" id="enfermedad-cronica" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
         </div>
       </tr>
       <br>
       <tr>
         <td>Toma algun medicamento?</td>
         <div>
-          <input type="radio" name="cronica" id="" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
+          <input type="radio" name="medicamneto" id="medicamento" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
         </div>
       </tr>
       <br>
-      <tr>Otras obvervaciones</tr>
+      <tr>Otras observaciones</tr>
       <td>
         <textarea
-            name="" id="" cols="50" rows="5"
+            name="observaciones" id="observaciones" cols="50" rows="5"
             maxlength="500" placeholder="Notas extra para tener en cuenta... (MÁXIMO 500 CARACTERES)"></textarea>
       </td>
       </tbody>
