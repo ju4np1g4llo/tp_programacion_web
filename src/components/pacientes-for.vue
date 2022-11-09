@@ -125,28 +125,10 @@
       <br>
       <tr>
         <td class="titulo-alergias">Alergias</td>
-
-        <div class="alergias">
-          <div>
-            <td>Antibioticos</td> <input type="checkbox" name="alergias" id="" value="SI">SI <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
-          </div>
-          <br>
-          <div>
-            <td>Medicamentos</td> <input type="checkbox" name="alergias" id="" value="SI">SI <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
-          </div>
-          <br>
-          <div>
-            <td>Alimentos</td> <input type="checkbox" name="alergias" id="" value="SI">SI <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
-          </div>
-          <br>
-          <div>
-            <td>Animales</td> <input type="checkbox" name="alergias" id="" value="SI">SI <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
-          </div>
-          <br>
-          <div>
-            <td>Picaduras</td> <input type="checkbox" name="alergias" id="" value="SI">SI <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
-          </div>
+        <div>
+          <input type="checkbox" name="cronica" id="cronica" value="SI">SI &nbsp; <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
         </div>
+
       </tr>
       <br>
       <tr>
