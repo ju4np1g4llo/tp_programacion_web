@@ -11,8 +11,8 @@
     </router-link>
 
   </div>
-  <div class="lista">
-    <table>
+  <div id="lista">
+    <table id="tabla_pacientes" hidden>
       <thead>
         <tr>
           <th>Fecha de consulta</th>
