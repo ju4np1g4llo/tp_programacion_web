@@ -17,14 +17,14 @@
               <td>Fecha de la consulta</td>
               &nbsp;
               <td>
-                <input type=date name="fecha de nacimiento" id="">
+                <input type=date name="fecha" id="fecha">
               </td>
             </tr>
             <tr>
             <td>Nombre Completo</td>
             &nbsp;
             <td>
-              <input type="text" name="nombre" id=""
+              <input type="text" name="nombre" id="nombre"
                       placeholder="Ingrese el nombre completo">
             </td>
             </tr>
@@ -32,7 +32,7 @@
               <td>Edad</td>
               &nbsp;
               <td>
-            <input type="number" name="edad" id=""
+            <input type="number" name="edad" id="edad"
                    step="1" placeholder="Ingrese la edad">
             </td>
             </tr>
@@ -40,22 +40,22 @@
               <td>Sexo</td>
               &nbsp;
               <td>
-                <input type="radio" name="sexo" id="" value="M">Masc.
-                <input type="radio" name="sexo" id="" value="F">Fem.
+                <input type="radio" name="sexo" id="sexo" value="M">Masc.
+                <input type="radio" name="sexo" id="sexo" value="F">Fem.
             </td>
             </tr>
             <tr>
               <td>Altura</td>
               &nbsp;
               <td>
-                <input type="number" name="altura" id="" placeholder="Ingrese la altura en metros">&nbsp;m
+                <input type="number" name="altura" id="altura" placeholder="Ingrese la altura en metros">&nbsp;m
               </td>
             </tr>
             <tr>
               <td>Peso</td>
               &nbsp;
               <td>
-                <input type="number" name="peso" id="" placeholder="Ingrese el peso en Kgs"> &nbsp;Kg
+                <input type="number" name="peso" id="peso" placeholder="Ingrese el peso en Kgs"> &nbsp;Kg
               </td>
 
             </tr>
@@ -63,9 +63,9 @@
               <td>Obra social</td>
               &nbsp;
               <td>
-                <input type="radio" name="obra social" id="" value="SI">SI
-                <input type="radio" name="obra social" id="" value="NO">NO
-                <input type="text" name="obra social" id="" placeholder="Nombre de la obra social">
+                <input type="radio" name="obra social" id="obra-social" value="SI">SI
+                <input type="radio" name="obra social" id="obra-social" value="NO">NO
+                <input type="text" name="obra social" id="obra-social" placeholder="Nombre de la obra social">
                 &nbsp;
                 <input type="number" name="obra social" id="" placeholder="Número de obra social">
               </td>
@@ -75,14 +75,14 @@
               <td>Domicilio</td>
               &nbsp;
               <td>
-                <input type="text" name="direccion" id="" placeholder="Ingrese el domicilio del paciente">
+                <input type="text" name="direccion" id="direccion" placeholder="Ingrese el domicilio del paciente">
               </td>
             </tr>
             <tr>
               <td>Teléfono</td>
               &nbsp;
               <td>
-                <input type="text" name="" id=""
+                <input type="text" name="telefono" id="telefono"
             maxlength="10" value="+54" placeholder="Celular o Teléfono">
               </td>
             </tr>
@@ -90,7 +90,7 @@
               <td>Email</td>
               &nbsp;
               <td>
-                <input type="email" name="mail" id="" value="@" placeholder="Correo Electrónico">
+                <input type="email" name="mail" id="mail" value="@" placeholder="Correo Electrónico">
               </td>
             </tr>
           </tbody>
@@ -108,7 +108,7 @@
       <tr>
         <td>Grupo sanguineo</td>
         <td>
-          <select name="sangre" id="">
+          <select name="sangre" id="grupo-sanguineo">
             <option value="tipo de sangre:">A+</option>
             <option value="tipo de sangre:">A-</option>
             <option value="tipo de sangre:">B+</option>
@@ -185,7 +185,9 @@
 
   <br>
 <div class="enviar-borrar">
-  <input type="submit" value="Enviar">
+  <button id="agregarPaciente" @click="addPaciente">
+    Enviar
+  </button>
 
   <input type="reset" value="Borrar Formulario">
 </div>
@@ -195,6 +197,7 @@
 
 <script>
 import headerTop from "@/components/header-top";
+import axios from "axios";
 
 
 export default {
@@ -202,6 +205,21 @@ export default {
   components: {
     headerTop,
   },
+  methods: {
+    addPaciente() {
+
+      axios.post('http://127.0.0.1:5000/api/v1/lista-pacientes', {
+        'fecha': "18" ,
+        'img': this.nombre + '.jpg',
+        'long': '2m',
+        'name': this.nombre,
+        'type': 'carnivoro',
+        'weight': this.peso
+      })
+          .then(resp => console.log(resp))
+          .catch(e => console.log('Error!!!', e))
+    }
+  }
 }
 </script>
 
@@ -214,7 +232,6 @@ export default {
   flex-direction: row;
   padding-top: 3%;
 }
-
 span{
   font-size: medium;
   text-align: center;
@@ -224,12 +241,9 @@ span{
   display: block;
   border: 2px solid black;
 }
-
-
 span:hover{
   background-color: grey;
   border: 3px solid black;
-
 }
 .alergias{
   display:flex;
@@ -238,7 +252,6 @@ span:hover{
 .titulo-alergias{
   align-items: first;
 }
-
 input[type=reset] {
   font-size: medium;
   text-align: center;
@@ -266,14 +279,12 @@ input[type=submit]:hover{
   background-color: grey;
   border: 3px solid black;
 }
-
 .enviar-borrar{
   display: flex;
   flex-direction: row;
   margin-left:10%;
   margin-bottom: 3%;
 }
-
 form{
   margin-left: 10%;
   margin-right: 10%;

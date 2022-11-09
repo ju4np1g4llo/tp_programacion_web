@@ -15,7 +15,7 @@
         <div class="fichaMedica">
           <div class="divLeft">
             <div class="information">
-              <p>Nombre:</p>
+              <p>Nombre y Apellido:</p>
               <p>Edad:</p>
               <p>Sexo:</p>
               <p>Altura:</p>
@@ -108,7 +108,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 100px;
+  gap: 50px;
 }
 .divLeft, .divRight{
   display: flex;
