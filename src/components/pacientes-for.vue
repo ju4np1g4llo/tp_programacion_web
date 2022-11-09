@@ -17,7 +17,7 @@
               <td>Fecha de la consulta</td>
               &nbsp;
               <td>
-                <input type=date name="fecha de consulta" id="fecha-consulta">
+                <input type=date name="fecha" id="fecha">
               </td>
             </tr>
             <tr>
@@ -152,28 +152,28 @@
       <tr>
         <td>Antecedentes de enfermedades e intervenciones quirúrgicas anteriores</td>
         <td>
-          <textarea name="antecedentes" id="antecedentes" cols="50" rows="5" maxlength="500" placeholder="Ingrese la información adecuada... (MÁXIMO 500 CARACTERES)"></textarea>
+          <textarea name="" id="" cols="50" rows="5" maxlength="500" placeholder="Ingrese la información adecuada... (MÁXIMO 500 CARACTERES)"></textarea>
         </td>
       </tr>
       <br>
       <tr>
         <td>Padece alguna enfermedad cronica?</td>
         <div>
-          <input type="radio" name="enfermedad-cronica" id="enfermedad-cronica" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
+          <input type="radio" name="cronica" id="" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
         </div>
       </tr>
       <br>
       <tr>
         <td>Toma algun medicamento?</td>
         <div>
-          <input type="radio" name="medicamneto" id="medicamento" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
+          <input type="radio" name="cronica" id="" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
         </div>
       </tr>
       <br>
-      <tr>Otras observaciones</tr>
+      <tr>Otras obvervaciones</tr>
       <td>
         <textarea
-            name="observaciones" id="observaciones" cols="50" rows="5"
+            name="" id="" cols="50" rows="5"
             maxlength="500" placeholder="Notas extra para tener en cuenta... (MÁXIMO 500 CARACTERES)"></textarea>
       </td>
       </tbody>
@@ -185,7 +185,9 @@
 
   <br>
 <div class="enviar-borrar">
-  <input type="submit" value="Enviar">
+  <button id="agregarPaciente" @click="addPaciente">
+    Enviar
+  </button>
 
   <input type="reset" value="Borrar Formulario">
 </div>
@@ -195,6 +197,7 @@
 
 <script>
 import headerTop from "@/components/header-top";
+import axios from "axios";
 
 
 export default {
@@ -202,6 +205,21 @@ export default {
   components: {
     headerTop,
   },
+  methods: {
+    addPaciente() {
+
+      axios.post('http://127.0.0.1:5000/api/v1/lista-pacientes', {
+        'fecha': "18" ,
+        'img': this.nombre + '.jpg',
+        'long': '2m',
+        'name': this.nombre,
+        'type': 'carnivoro',
+        'weight': this.peso
+      })
+          .then(resp => console.log(resp))
+          .catch(e => console.log('Error!!!', e))
+    }
+  }
 }
 </script>
 
@@ -214,7 +232,6 @@ export default {
   flex-direction: row;
   padding-top: 3%;
 }
-
 span{
   font-size: medium;
   text-align: center;
@@ -224,12 +241,9 @@ span{
   display: block;
   border: 2px solid black;
 }
-
-
 span:hover{
   background-color: grey;
   border: 3px solid black;
-
 }
 .alergias{
   display:flex;
@@ -238,7 +252,6 @@ span:hover{
 .titulo-alergias{
   align-items: first;
 }
-
 input[type=reset] {
   font-size: medium;
   text-align: center;
@@ -266,14 +279,12 @@ input[type=submit]:hover{
   background-color: grey;
   border: 3px solid black;
 }
-
 .enviar-borrar{
   display: flex;
   flex-direction: row;
   margin-left:10%;
   margin-bottom: 3%;
 }
-
 form{
   margin-left: 10%;
   margin-right: 10%;
