@@ -8,7 +8,7 @@
     </router-link>
   </div>
 
-  <form action="mailto:peinchaust@ucema.edu.ar" method="post" enctype="text/plain">
+  <form method="post" enctype="text/plain">
     <fieldset>
       <legend>IDENTIFICACIÓN PERSONAL</legend>
         <table>
@@ -48,14 +48,14 @@
               <td>Altura</td>
               &nbsp;
               <td>
-                <input type="number" name="altura" id="altura" placeholder="Ingrese la altura en metros">&nbsp;m
+                <input type="number" name="altura" id="altura" placeholder="Ingrese la altura en metros">&nbsp;cm
               </td>
             </tr>
             <tr>
               <td>Peso</td>
               &nbsp;
               <td>
-                <input type="number" name="peso" id="peso" placeholder="Ingrese el peso en Kgs"> &nbsp;Kg
+                <input type="number" name="peso" id="peso" placeholder="Ingrese el peso en Kgs"> &nbsp;kg
               </td>
 
             </tr>
@@ -128,23 +128,23 @@
 
         <div class="alergias">
           <div>
-            <td>Antibioticos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
+            <td>Antibioticos</td> <input type="checkbox" name="alergias" id="" value="SI">SI <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
           </div>
           <br>
           <div>
-            <td>Medicamentos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
+            <td>Medicamentos</td> <input type="checkbox" name="alergias" id="" value="SI">SI <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
           </div>
           <br>
           <div>
-            <td>Alimentos</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
+            <td>Alimentos</td> <input type="checkbox" name="alergias" id="" value="SI">SI <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
           </div>
           <br>
           <div>
-            <td>Animales</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
+            <td>Animales</td> <input type="checkbox" name="alergias" id="" value="SI">SI <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
           </div>
           <br>
           <div>
-            <td>Picaduras</td> <input type="radio" name="alergias" id="" value="SI">SI <input type="radio" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
+            <td>Picaduras</td> <input type="checkbox" name="alergias" id="" value="SI">SI <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp;Cual?<input type="text" id="">
           </div>
         </div>
       </tr>
@@ -159,21 +159,21 @@
       <tr>
         <td>Padece alguna enfermedad cronica?</td>
         <div>
-          <input type="radio" name="cronica" id="" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
+          <input type="checkbox" name="cronica" id="" value="SI">SI &nbsp; <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
         </div>
       </tr>
       <br>
       <tr>
         <td>Toma algun medicamento?</td>
         <div>
-          <input type="radio" name="cronica" id="" value="SI">SI &nbsp; <input type="radio" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
+          <input type="checkbox" name="cronica" id="cronica" value="SI">SI &nbsp; <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
         </div>
       </tr>
       <br>
       <tr>Otras obvervaciones</tr>
       <td>
         <textarea
-            name="" id="" cols="50" rows="5"
+            name="Observacion" id="Observacion" cols="50" rows="5"
             maxlength="500" placeholder="Notas extra para tener en cuenta... (MÁXIMO 500 CARACTERES)"></textarea>
       </td>
       </tbody>
@@ -184,13 +184,11 @@
 
 
   <br>
-<div class="enviar-borrar">
-  <button id="agregarPaciente" @click="addPaciente">
-    Enviar
-  </button>
+    <div class="enviar-borrar">
+      <input type="submit" value="Enviar" onclick="addPaciente()">
 
-  <input type="reset" value="Borrar Formulario">
-</div>
+      <input type="reset" value="Borrar Formulario">
+    </div>
 
   </form>
 </template>
@@ -202,6 +200,26 @@ import axios from "axios";
 
 export default {
   name: 'pacientes-for',
+  data() {
+    return {
+      Fecha_consulta: "",
+      Nombre: "",
+      Edad: "",
+      Sexo: "",
+      Altura: "",
+      Peso: "",
+      Obra_social: "",
+      Direccion: "",
+      Telefono: "",
+      Mail: "",
+      Grupo_sanguineo: "",
+      Alergias: "",
+      Antecedentes: "",
+      Enfermedad_cronica: "",
+      Medicamento: "",
+      Observacion: "",
+    }
+  },
   components: {
     headerTop,
   },
@@ -209,15 +227,24 @@ export default {
     addPaciente() {
 
       axios.post('http://127.0.0.1:5000/api/v1/lista-pacientes', {
-        'fecha': "18" ,
-        'img': this.nombre + '.jpg',
-        'long': '2m',
-        'name': this.nombre,
-        'type': 'carnivoro',
-        'weight': this.peso
+        'Fecha_consulta': this.Fecha_consulta,
+        'Nombre': this.Nombre,
+        'Edad': this.Edad,
+        'Sexo': this.Sexo,
+        'Altura': this.Altura,
+        'Peso': this.Peso,
+        'Obra_social': this.Obra_social,
+        'Direccion': this.Direccion,
+        'Telefono': this.Telefono,
+        'Mail': this.Mail,
+        'Grupo_sanguineo': this.Grupo_sanguineo,
+        'Alergias': this.Alergias,
+        'Antecedentes': this.Antecedentes,
+        'Enfermedad_cronica': this.Enfermedad_cronica,
+        'Medicamento': this.Medicamento,
+        'Observacion': this.Observacion,
       })
           .then(resp => console.log(resp))
-          .catch(e => console.log('Error!!!', e))
     }
   }
 }
