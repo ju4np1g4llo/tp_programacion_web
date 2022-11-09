@@ -17,14 +17,14 @@
               <td>Fecha de la consulta</td>
               &nbsp;
               <td>
-                <input type=date name="fecha" id="fecha">
+                <input type=date v-model="Fecha_consulta">
               </td>
             </tr>
             <tr>
             <td>Nombre Completo</td>
             &nbsp;
             <td>
-              <input type="text" name="nombre" id="nombre"
+              <input type="text" v-model="Nombre"
                       placeholder="Ingrese el nombre completo">
             </td>
             </tr>
@@ -32,7 +32,7 @@
               <td>Edad</td>
               &nbsp;
               <td>
-            <input type="number" name="edad" id="edad"
+            <input type="number" v-model="Edad"
                    step="1" placeholder="Ingrese la edad">
             </td>
             </tr>
@@ -40,22 +40,22 @@
               <td>Sexo</td>
               &nbsp;
               <td>
-                <input type="radio" name="sexo" id="sexo" value="M">Masc.
-                <input type="radio" name="sexo" id="sexo" value="F">Fem.
+                <input type="radio" v-model="Sexo" value="M">Masc.
+                <input type="radio" v-model="Sexo" value="F">Fem.
             </td>
             </tr>
             <tr>
               <td>Altura</td>
               &nbsp;
               <td>
-                <input type="number" name="altura" id="altura" placeholder="Ingrese la altura en metros">&nbsp;cm
+                <input type="number" v-model="Altura" placeholder="Ingrese la altura en metros">&nbsp;cm
               </td>
             </tr>
             <tr>
               <td>Peso</td>
               &nbsp;
               <td>
-                <input type="number" name="peso" id="peso" placeholder="Ingrese el peso en Kgs"> &nbsp;kg
+                <input type="number" v-model="Peso" placeholder="Ingrese el peso en Kgs"> &nbsp;kg
               </td>
 
             </tr>
@@ -63,11 +63,11 @@
               <td>Obra social</td>
               &nbsp;
               <td>
-                <input type="radio" name="obra social" id="obra-social" value="SI">SI
-                <input type="radio" name="obra social" id="obra-social" value="NO">NO
-                <input type="text" name="obra social" id="obra-social" placeholder="Nombre de la obra social">
+                <input type="radio" v-model="Obra_social_tiene"  value="SI">SI
+                <input type="radio" v-model="Obra_social_tiene"  value="NO">NO
+                <input type="text"  v-model="Obra_social_nombre" placeholder="Nombre de la obra social">
                 &nbsp;
-                <input type="number" name="obra social" id="" placeholder="Número de obra social">
+                <input type="number" v-model="Obra_social_numero" placeholder="Número de obra social">
               </td>
 
             </tr>
@@ -75,22 +75,22 @@
               <td>Domicilio</td>
               &nbsp;
               <td>
-                <input type="text" name="direccion" id="direccion" placeholder="Ingrese el domicilio del paciente">
+                <input type="text" v-model="Direccion" placeholder="Ingrese el domicilio del paciente">
               </td>
             </tr>
             <tr>
               <td>Teléfono</td>
               &nbsp;
               <td>
-                <input type="text" name="telefono" id="telefono"
-            maxlength="10" value="+54" placeholder="Celular o Teléfono">
+                <input type="text" v-model="Telefono"
+            maxlength="14" placeholder="Celular o Teléfono">
               </td>
             </tr>
             <tr>
               <td>Email</td>
               &nbsp;
               <td>
-                <input type="email" name="mail" id="mail" value="@" placeholder="Correo Electrónico">
+                <input type="email" v-model="Mail" placeholder="Correo Electrónico">
               </td>
             </tr>
           </tbody>
@@ -108,7 +108,7 @@
       <tr>
         <td>Grupo sanguineo</td>
         <td>
-          <select name="sangre" id="grupo-sanguineo">
+          <select v-model="Grupo_sanguineo">
             <option value="tipo de sangre:">A+</option>
             <option value="tipo de sangre:">A-</option>
             <option value="tipo de sangre:">B+</option>
@@ -126,7 +126,7 @@
       <tr>
         <td class="titulo-alergias">Alergias</td>
         <div>
-          <input type="checkbox" name="cronica" id="cronica" value="SI">SI &nbsp; <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
+          <input type="checkbox" v-model="Alergias_tiene_si" value="SI">SI &nbsp; <input type="checkbox" v-model="Alergias_tiene_no" value="NO">NO &nbsp; Cual?<input type="text" v-model="Alergias_cual">
         </div>
 
       </tr>
@@ -134,28 +134,28 @@
       <tr>
         <td>Antecedentes de enfermedades e intervenciones quirúrgicas anteriores</td>
         <td>
-          <textarea name="" id="" cols="50" rows="5" maxlength="500" placeholder="Ingrese la información adecuada... (MÁXIMO 500 CARACTERES)"></textarea>
+          <textarea v-model="Antecedentes" cols="50" rows="5" maxlength="500" placeholder="Ingrese la información adecuada... (MÁXIMO 500 CARACTERES)"></textarea>
         </td>
       </tr>
       <br>
       <tr>
         <td>Padece alguna enfermedad cronica?</td>
         <div>
-          <input type="checkbox" name="cronica" id="" value="SI">SI &nbsp; <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
+          <input type="checkbox" v-model="Enfermedad_cronica_tiene_si" value="SI">SI &nbsp; <input type="checkbox" v-model="Enfermedad_cronica_tiene_no" value="NO">NO &nbsp; Cual?<input type="text" v-model="Enfermedad_cronica_cual">
         </div>
       </tr>
       <br>
       <tr>
         <td>Toma algun medicamento?</td>
         <div>
-          <input type="checkbox" name="cronica" id="cronica" value="SI">SI &nbsp; <input type="checkbox" name="alergias" id="" value="NO">NO &nbsp; Cual?<input type="text" id="">
+          <input type="checkbox" v-model="Medicamento_toma_si" value="SI">SI &nbsp; <input type="checkbox" v-model="Medicamento_toma_no" value="NO">NO &nbsp; Cual?<input type="text" v-model="Medicamento_cual">
         </div>
       </tr>
       <br>
       <tr>Otras obvervaciones</tr>
       <td>
         <textarea
-            name="Observacion" id="Observacion" cols="50" rows="5"
+            v-model="Observacion" cols="50" rows="5"
             maxlength="500" placeholder="Notas extra para tener en cuenta... (MÁXIMO 500 CARACTERES)"></textarea>
       </td>
       </tbody>
@@ -190,15 +190,23 @@ export default {
       Sexo: "",
       Altura: "",
       Peso: "",
-      Obra_social: "",
+      Obra_social_tiene: "",
+      Obra_social_nombre: "",
+      Obra_social_numero: "",
       Direccion: "",
       Telefono: "",
       Mail: "",
       Grupo_sanguineo: "",
-      Alergias: "",
+      Alergias_cual: "",
+      Alergias_tiene_si: "",
+      Alergias_tiene_no: "",
       Antecedentes: "",
-      Enfermedad_cronica: "",
-      Medicamento: "",
+      Enfermedad_cronica_tiene_si: "",
+      Enfermedad_cronica_tiene_no: "",
+      Enfermedad_cronica_cual: "",
+      Medicamento_toma_si: "",
+      Medicamento_toma_no: "",
+      Medicamento_cual: "",
       Observacion: "",
     }
   },
@@ -215,15 +223,23 @@ export default {
         'Sexo': this.Sexo,
         'Altura': this.Altura,
         'Peso': this.Peso,
-        'Obra_social': this.Obra_social,
+        'Obra_social_tiene': this.Obra_social_tiene,
+        'Obra_social_nombre': this.Obra_social_nombre,
+        'Obra_social_numero': this.Obra_social_numero,
         'Direccion': this.Direccion,
         'Telefono': this.Telefono,
         'Mail': this.Mail,
         'Grupo_sanguineo': this.Grupo_sanguineo,
-        'Alergias': this.Alergias,
+        'Alergias_tiene_si': this.Alergias_tiene_si,
+        'Alergias_tiene_no': this.Alergias_tiene_no,
+        'Alergias_cual': this.Alergias_cual,
         'Antecedentes': this.Antecedentes,
-        'Enfermedad_cronica': this.Enfermedad_cronica,
-        'Medicamento': this.Medicamento,
+        'Enfermedad_cronica_tiene_si': this.Enfermedad_cronica_tiene_si,
+        'Enfermedad_cronica_tiene_no': this.Enfermedad_cronica_tiene_no,
+        'Enfermedad_cual': this.Enfermedad_cronica_cual,
+        'Medicamento_toma_si': this.Medicamento_toma_si,
+        'Medicamento_toma_no': this.Medicamento_toma_no,
+        'Medicamento_cual': this.Medicamento_cual,
         'Observacion': this.Observacion,
       })
           .then(resp => console.log(resp))
