@@ -52,7 +52,7 @@
           </td>
         </tr>
         <tr>
-          <td>Email</td><input type="email" name="mail" id="" value="@" placeholder="Ingrese dirección de correo electrónico">
+          <td>Email</td><input value="@" placeholder="Ingrese dirección de correo electrónico">
         </tr>
         </tbody>
       </table>
@@ -72,13 +72,40 @@
 
 <script>
 import headerTop from "@/components/header-top";
+import axios from "axios";
 
 
 export default {
   name: 'pacientes-for',
+  data() {
+    return {
+      nombre: "",
+      apellido:"",
+      email:""
+    }
+  },
+  methods: {
+    orderCart() {
+      axios.post("http://localhost:5000/api/v1/orders", {
+        user: this.fullName,
+        address: this.address,
+        phone_number: this.phoneNumber,
+        shopping_cart: JSON.parse(this.$route.query['shoppingCart']),
+      })
+          .then(response => {
+            console.log(response)
+            this.$router.push({name: "CheckoutSuccessRoute", params: {order_id: response.data["order_id"]}})
+          })
+          .catch(error => {
+            console.log(error);
+            this.$router.push({name: "CheckoutServerErrorRoute"})
+          });
+    }
+  },
   components: {
     headerTop,
   },
+
 }
 </script>
 

@@ -8,7 +8,7 @@
     </router-link>
   </div>
 
-  <form method="post" enctype="text/plain">
+  <form method="post" enctype="text/plain" @submit.prevent="addPaciente()">
     <fieldset>
       <legend>IDENTIFICACIÓN PERSONAL</legend>
         <table>
@@ -167,7 +167,7 @@
 
   <br>
     <div class="enviar-borrar">
-      <input type="submit" value="Enviar" onclick="addPaciente()">
+      <input type="submit" value="Enviar">
 
       <input type="reset" value="Borrar Formulario">
     </div>
@@ -217,34 +217,39 @@ export default {
     addPaciente() {
 
       axios.post('http://127.0.0.1:5000/api/v1/lista-pacientes', {
-        'Fecha_consulta': this.Fecha_consulta,
-        'Nombre': this.Nombre,
-        'Edad': this.Edad,
-        'Sexo': this.Sexo,
-        'Altura': this.Altura,
-        'Peso': this.Peso,
-        'Obra_social_tiene': this.Obra_social_tiene,
-        'Obra_social_nombre': this.Obra_social_nombre,
-        'Obra_social_numero': this.Obra_social_numero,
-        'Direccion': this.Direccion,
-        'Telefono': this.Telefono,
-        'Mail': this.Mail,
-        'Grupo_sanguineo': this.Grupo_sanguineo,
-        'Alergias_tiene_si': this.Alergias_tiene_si,
-        'Alergias_tiene_no': this.Alergias_tiene_no,
-        'Alergias_cual': this.Alergias_cual,
-        'Antecedentes': this.Antecedentes,
-        'Enfermedad_cronica_tiene_si': this.Enfermedad_cronica_tiene_si,
-        'Enfermedad_cronica_tiene_no': this.Enfermedad_cronica_tiene_no,
-        'Enfermedad_cual': this.Enfermedad_cronica_cual,
-        'Medicamento_toma_si': this.Medicamento_toma_si,
-        'Medicamento_toma_no': this.Medicamento_toma_no,
-        'Medicamento_cual': this.Medicamento_cual,
-        'Observacion': this.Observacion,
+        Fecha_consulta: this.Fecha_consulta,
+        Nombre: this.Nombre,
+        Edad: this.Edad,
+        Sexo: this.Sexo,
+        Altura: this.Altura,
+        Peso: this.Peso,
+        Obra_social_tiene: this.Obra_social_tiene,
+        Obra_social_nombre: this.Obra_social_nombre,
+        Obra_social_numero: this.Obra_social_numero,
+        Direccion: this.Direccion,
+        Telefono: this.Telefono,
+        Mail: this.Mail,
+        Grupo_sanguineo: this.Grupo_sanguineo,
+        Alergias_tiene_si: this.Alergias_tiene_si,
+        Alergias_tiene_no: this.Alergias_tiene_no,
+        Alergias_cual: this.Alergias_cual,
+        Antecedentes: this.Antecedentes,
+        Enfermedad_cronica_tiene_si: this.Enfermedad_cronica_tiene_si,
+        Enfermedad_cronica_tiene_no: this.Enfermedad_cronica_tiene_no,
+        Enfermedad_cual: this.Enfermedad_cronica_cual,
+        Medicamento_toma_si: this.Medicamento_toma_si,
+        Medicamento_toma_no: this.Medicamento_toma_no,
+        Medicamento_cual: this.Medicamento_cual,
+        Observacion: this.Observacion,
       })
-          .then(resp => console.log(resp))
+          .then(response => {
+            console.log(response)
+          })
+          .catch(error => {
+            console.log(error);
+          });
     }
-  }
+    }
 }
 </script>
 
